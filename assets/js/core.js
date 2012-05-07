@@ -423,17 +423,20 @@ jQuery.fn.dynBase = function () {
 	var pbase = document.intro.baseloc.value;
 	
 	if (usafe_bases.test(pbase)) {
-		$('#baseinfo').removeClass('hide', 1);
+		$('#usafe_check').switchClass('hide', 'show', 1);
 	} else {
-		$('#baseinfo').addClass('hide', 1);
+		$('#usafe_check').switchClass('show', 'hide', 1);
 	}
 	
 	if (migrating_bases.test(pbase)) {
-		$('#baseinfo2').removeClass('hide', 1);
+		$('#migrating_check').switchClass('hide', 'show', 1);
 	} else {
-		$('#baseinfo2').addClass('hide', 1);
+		$('#migrating_check').switchClass('show', 'hide', 1);
 	}
-	
+}
+jQuery.fn.dynBaseReset = function () {
+	$('#usafe_check').switchClass('show', 'hide', 1);
+	$('#migrating_check').switchClass('show', 'hide', 1);
 }
 jQuery.fn.dynReset = function () {
 	//Reset Fields

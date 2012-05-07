@@ -1,30 +1,32 @@
-//Globals
-
-var gVersion          = "Version 2.6b" ;
-var hcontrast         = false ;
-var wscreen           = false ;
-var aTags_distinct    = new Array() ;
+//Global Vars
+var gVersion = "Version 2.6" ;
+var hcontrast = false ;
+var wscreen = false ;
+var aTags_distinct = new Array() ;
 var newwindow ;
-var stayontop         = false ;
+var stayontop = false ;
 var ishighticket ;
-var snapts            = document.lastModified;
+var snapts = document.lastModified;
 var curts;
-var vercnt            = 0;
-var errstatus         = 0;
-var l2mode            = 0;
-var shift             = 0;
+var vercnt = 0;
+var errstatus = 0;
+var l2mode = 0;
+var shift = 0;
 
-var usafe_bases       = /(^Aviano|^Spang|^Rams|^Lajes|^Moron|^Izmir|^Ankara|^Inc|^Alcon|^Laken|^Mil|^Cro|^Mol|^Upw|^Wel|^Menwith|^Fairf|^RAF)/ig;
-var migrating_bases   = /(Patrick|Cape Canaveral|AFTAC|Ascension|Antigua|Barks|Hick|Kade)/ig;
+var is_usafe = false;
+var is_migrating = false;
+
+var usafe_bases = /(^Aviano|^Spang|^Rams|^Lajes|^Moron|^Izmir|^Ankara|^Inc|^Alcon|^Laken|^Mil|^Cro|^Mol|^Upw|^Wel|^Menwith|^Fairf|^RAF)/ig;
+var migrating_bases = /(Patrick|Cape Canaveral|AFTAC|Ascension|Antigua|Barks|Hick|Elmen|vance)/ig;
 
 //Common Issue Vars
 
-var port_security_info= false;
-var mail_info         = false;
-var migration_info    = false;
-var bb_info           = false;
-var sharedrive_info   = false;
-var printer_info      = false;
+var port_security_info = false;
+var mail_info = false;
+var migration_info = false;
+var bb_info = false;
+var sharedrive_info = false;
+var printer_info = false;
 
 jQuery.fn.updateqs = function () {
 	

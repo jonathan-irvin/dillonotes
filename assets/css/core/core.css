@@ -1,0 +1,44 @@
+.important{color:#2e6e9e;display:block;font-size:11px;font-weight:700;margin:20px auto;width:550px}
+.important-hc{color:#b8ec79;display:block;font-size:11px;font-weight:700;margin:20px auto;width:550px}
+.accordion{align:center;margin:0 auto;width:650px}
+.show{display:block}
+.lv_validation_message{font-weight:700;margin:0 0 0 5px}
+.lv_valid{color:#0C0}
+.lv_invalid{color:#C00}
+.lv_valid_field,input.lv_valid_field:hover,input.lv_valid_field:active,textarea.lv_valid_field:hover,textarea.lv_valid_field:active{border:1px solid #0C0}
+.lv_invalid_field,input.lv_invalid_field:hover,input.lv_invalid_field:active,textarea.lv_invalid_field:hover,textarea.lv_invalid_field:active{border:1px solid #C00}
+.searchlabel{color:#000;font-size:1em}
+body.c5{font-size:.7em}
+div.c1{display:block;font-size:3em;margin:0 auto;text-align:center}
+div.c4{font-size:.8em}
+div.c2{display:none;text-align:right}
+.std-input{background:#fff;border:solid 1px #2e6e9e;color:#e17009;font-size:22px;height:22px;margin:0 auto 0 25px;padding:2px;text-align:left}
+.hc-input{background:#000;border:solid 1px #b8ec79;color:#b8ec79;font-size:22px;height:22px;margin:0 auto 0 25px;padding:2px;text-align:left}
+.std-input-notes{background:#fff;color:#e17009;font-size:10px;height:16px;padding:2px;text-align:left}
+.hc-input-notes{background:#000;color:#b8ec79;font-size:16px;height:16px;padding:2px;text-align:left}
+input[type=text].std-input-notes,textarea.std-input-notes{border:solid 1px #2e6e9e}
+input[type=text].hc-input-notes,textarea.hc-input-notes{border:solid 1px #b8ec79}
+input[type=radio]{border:none}
+select.std-input-notes{border:solid 1px #2e6e9e;height:22px}
+select.hc-input-notes{border:solid 1px #b8ec79;height:22px}
+.backgrd{background:#d0e5f5}
+.backgrd_black{background:#000}
+.backgrd_chuck{background:url(./assets/images/chucknorris.bmp)}
+.content{margin:0 auto;padding:15px;text-align:left;width:750px}
+#errmsg{background:#d0e5f5;margin:0 auto;padding:15px;text-align:left;width:750px}
+.content-wide{margin:0 auto;padding:15px;text-align:left;width:95%}
+.page-header{color:#2e6e9e;font-size:22px}
+.global-err{color:#2e6e9e;font-size:40px}
+.page-copy{color:#2e6e9e;font-size:10px}
+.page-header-hc{color:#b8ec79;font-size:22px}
+.page-copy-hc{color:#b8ec79;font-size:10px}
+.options{color:#2e6e9e;font-size:12px}
+.options-hc{color:#b8ec79;font-size:12px}
+.hidden-text{color:#d0e5f5;font-size:120px;margin:auto}
+label.notes{color:#2e6e9e;display:block;float:left;font-weight:700;width:225px}
+label.notes-hc{color:#b8ec79;display:block;float:left;font-weight:700;width:225px}
+label:after{content:": "}
+.ui-resizable-se{bottom:17px}
+.accordion-hc,.accordion-wide{align:center;margin:0 auto;width:95%}
+.hide,div.c3,.hide{display:none}
+body{font-family:Lucida Grande, Lucida Sans, Arial, sans-serif;font-size:1.1em;margin:50px 0;padding:0;text-align:center}

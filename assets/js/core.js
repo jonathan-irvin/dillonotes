@@ -514,6 +514,10 @@ jQuery.fn.genNotes = function () {
 			document.intro.generatednotes.value += "Workstation Name: " + document.intro.workstation.value.toUpperCase() + "\n";
 		}
 		
+		if (sharedrive_info) {
+			document.intro.generatednotes.value += "Share Drive Path: " + document.intro.share_path.value + "\n";
+		}
+		
 		if (printer_info) {
 			document.intro.generatednotes.value += "Printer IP: " + document.intro.printer_network_ip.value + "\n";
 		}

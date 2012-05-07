@@ -17,7 +17,7 @@ var is_usafe = false;
 var is_migrating = false;
 
 var usafe_bases = /(^Aviano|^Spang|^Rams|^Lajes|^Moron|^Izmir|^Ankara|^Inc|^Alcon|^Laken|^Mil|^Cro|^Mol|^Upw|^Wel|^Menwith|^Fairf|^RAF)/ig;
-var migrating_bases = /(Patrick|Cape Canaveral|AFTAC|Ascension|Antigua|Barks|Hick|Elmen|vance)/ig;
+var migrating_bases = /(Patrick|Cape Canaveral|AFTAC|Ascension|Antigua|Barks|Hick|Elmen|Vance)/ig;
 
 //Common Issue Vars
 

@@ -63,31 +63,6 @@ jQuery.fn.updateqs = function () {
 	}
 }
 jQuery.fn.populate = function () {
-	/*C
-	var links = new Array();
-	var aTags = new Array();
-	$(this).info("Indexing content...");
-	for (i = 0; i < document.links.length; i++) {
-	//Test for empty links with #
-	var patt = /#/g;
-	var result = patt.test(document.links[i].href);
-	//alert(document.links[i].innerText+'\n');
-	if (!result) {
-	links.push(document.links[i].href);
-	aTags.push(document.links[i].innerText);
-	}
-	}
-	var sorted = aTags.sort();
-	for (i = 0; i < sorted.length - 1; i++) {
-	if (sorted[i + 1] != sorted[i]) {
-	aTags_distinct.push(sorted[i]);
-	}
-	}
-	//$(this).success("Indexing Complete!");
-	 */
-	/*$(this).info("This page was last modified on: " + document.lastModified);
-	//$(this).info("NOTE: These documents are intended for the use of the U.S. Military and Government only.");
-	//$(this).info("Do not reproduce or distribute these documents to a wider audience without coordination with the information owner and your unit public affairs office.");*/
 	
 	$(this).inlineerror("Test");
 	
@@ -194,8 +169,7 @@ jQuery.fn.toggleLevelII = function () {
 			$('#basic2').hide('blind', 1000);
 			$('#basic3').hide('blind', 1000);
 			$('#basic4').hide('blind', 1000);
-			l2mode = 1;
-			//$(this).success('Level 2 Mode ACTIVATED');
+			l2mode = 1;			
 		}
 		
 	} else {
@@ -204,76 +178,11 @@ jQuery.fn.toggleLevelII = function () {
 			$('#basic2').show('blind', 1000);
 			$('#basic3').hide('blind', 1000);
 			$('#basic4').hide('blind', 1000);
-			l2mode = 0;
-			//$(this).success('Level 2 Mode DEACTIVATED');
-		}
-		
+			l2mode = 0;			
+		}		
 	}
 }
 jQuery.fn.resetValidation = function () {
-	/* USED FOR FORM VALIDATION */
-	/*var epi		= new LiveValidation('edipi');
-	var base	= new LiveValidation('blist');
-	var pissue	= new LiveValidation('ptkt');
-	var works		= new LiveValidation('wks');
-	var pdesc		= new LiveValidation('probdesc');
-	var res	= new LiveValidation('resarea-cust');
-	var afftu		= new LiveValidation('isafftuser');
-	var poc	= new LiveValidation('poc');
-	var dsn	= new LiveValidation('dsn');
-	epi.disable();
-	epi.enable();
-	base.disable();
-	base.enable();
-	pissue.disable();
-	pissue.enable();
-	works.disable();
-	works.enable();
-	pdesc.disable();
-	pdesc.enable();
-	res.disable();
-	res.enable();
-	afftu.disable();
-	afftu.enable();
-	poc.disable();
-	poc.enable();
-	dsn.disable();
-	dsn.enable();
-	
-	epi.add(Validate.Presence, {
-	failureMessage: "EDI PI cannot be empty!"
-	});
-	epi.add(Validate.Length, {
-	is: 10
-	});
-	epi.add(Validate.Numericality, {
-	onlyInteger: true,
-	failureMessage: "EDI PI number can only be numbers!"
-	});
-	base.add(Validate.Presence, {
-	failureMessage: "Enter a base!"
-	});
-	pissue.add(Validate.Presence, {
-	failureMessage: "Enter existing TT Numbers!"
-	});
-	works.add(Validate.Presence, {
-	failureMessage: "Enter a workstation!"
-	});
-	pdesc.add(Validate.Presence, {
-	failureMessage: "Please specify an issue!"
-	});
-	res.add(Validate.Presence, {
-	failureMessage: "Don't leave empty!"
-	});
-	afftu.add(Validate.Presence, {
-	failureMessage: "Who's the ticket for?"
-	});
-	poc.add(Validate.Presence, {
-	failureMessage: "Who's calling?"
-	});
-	dsn.add(Validate.Presence, {
-	failureMessage: "Where can the user be reached?"
-	});*/
 	
 	$('#prevtktdiv').removeClass("show", 1);
 	$('#hightxtpoc').removeClass("show", 1);
@@ -404,20 +313,6 @@ jQuery.fn.toggleCommon = function () {
 			break;
 		}
 	}
-	/*
-	if (migration) {
-	$('#migration').switchClass("hide", "show", 1);
-	}else if (dmdc) {
-	$('#dmdc_info').switchClass("hide", "show", 1);
-	}else if (printer) {
-	//$('#device_info_basic').switchClass("hide", "show", 1);
-	$('#network_info_basic').switchClass("hide", "show", 1);
-	}else if (wkstation) {
-	//$('#ws_info').switchClass("hide", "show", 1);
-	//$('#device_info_basic').switchClass("hide", "show", 1);
-	//$('#network_info_basic').switchClass("hide", "show", 1);
-	}
-	 */
 }
 jQuery.fn.dynBase = function () {
 	var pbase = document.intro.baseloc.value;
@@ -539,37 +434,12 @@ jQuery.fn.genNotes = function () {
 	var tstext = document.intro.troubleshooting.value.split("\n");
 	var restext = document.intro.resolution.value.split("\n");
 	
-	/* USAFE Bases
-	
-	Aviano
-	Spangdahlem
-	Ramstein
-	Lajes
-	Moron
-	Izmir
-	Ankara
-	Incirlik
-	Alconbury
-	Lakenheath
-	Mildenhall
-	Croughton
-	Molesworth
-	Upwood
-	Welford
-	Menwith Hill
-	Fairford
-	
-	 */
-	
 	if (document.intro.isiao1[0].checked) {
 		iao = "IAO";
 	} else {
 		iao = "USER";
-	}
-	//if (document.intro.isiao3.checked)	{csa = "CSA";}else{csa = "";}
-	//if (document.intro.isiao4.checked)	{cfp = "CFP";}else{cfp = "";}
-	
-	//document.intro.generatednotes.value = "This is a " + niprsipr + " issue.\n";
+	}	
+
 	if (niprsipr == "SIPR") {
 		document.intro.generatednotes.value = "*** SIPRNET ticket reference SIPRNET email for more information ***\n"
 	}
@@ -585,8 +455,7 @@ jQuery.fn.genNotes = function () {
 	document.intro.generatednotes.value += "PM is " + document.intro.prioritymatrix.options[document.intro.prioritymatrix.selectedIndex].value + "\n";
 	if ((document.intro.highpoc.value !== "") && (document.intro.prioritymatrix.options[2].selected)) {
 		document.intro.generatednotes.value += "HIGH Ticket 24HR POC: " + document.intro.highpoc.value + "\n";
-	}
-	//document.intro.generatednotes.value += neworexisting + " Issue\n";
+	}	
 	if (neworexisting == "EXISTING") {
 		document.intro.generatednotes.value += "Prior Incidents: " + document.intro.prevtkt.value + "\n";
 	}
@@ -613,8 +482,6 @@ jQuery.fn.genNotes = function () {
 	if (document.intro.probdesc.value != "") {
 		document.intro.generatednotes.value += "Issue: " + document.intro.probdesc.value + "\n";
 	}
-	
-	/* document.intro.generatednotes.value += "Impact: " + document.intro.numaffected.value + "\n";	*/
 	
 	if (dse.length > 0) {
 		document.intro.generatednotes.value += "Digitally-Signed Email Received? " + "YES" + "\n\n";
@@ -766,14 +633,7 @@ jQuery.fn.genNotes = function () {
 	}
 	
 	document.intro.generatednotes.value += "\n";
-	/* Per Ops, DW, Removed 3/12/2012
-	if(restext.length > 0){
-	//document.intro.generatednotes.value += "In closing... \n--------------- \n";
-	for (i = 0; i < restext.length; i++) {
-	document.intro.generatednotes.value += restext[i] + "\n";
-	}
-	}
-	 */
+
 	var notes_complete = document.intro.generatednotes.value;
 	if (document.intro.troubleshooting.value != "") {
 		document.intro.generatednotes.value = $(this).splitText(notes_complete, 55);
@@ -844,8 +704,7 @@ jQuery.fn.high_contrast = function (enabled) {
 	document.getElementById('high-contrast-box').disabled = true;
 	document.getElementById('wide-screen-box').disabled = true;
 	if (enabled) {
-		document.getElementById('page-style').href = 'assets/css/trontastic/jquery-ui-1.8.13.custom.css';
-		//document.getElementById('searchbox').size = 37;
+		document.getElementById('page-style').href = 'assets/css/trontastic/jquery-ui-1.8.13.custom.css';		
 		$(".backgrd").switchClass('backgrd', 'backgrd_black', 3000);
 		$(".notes").switchClass('notes', 'notes-hc', 3000);
 		$(".std-input-notes").switchClass('std-input-notes', 'hc-input-notes', 3000);
@@ -858,12 +717,10 @@ jQuery.fn.high_contrast = function (enabled) {
 		document.getElementById('high-contrast-box').checked = true;
 		hcontrast = true;
 		var hce = setTimeout("document.getElementById('high-contrast-box').disabled = false", 3100);
-		var wse = setTimeout("document.getElementById('wide-screen-box').disabled = false", 3100);
-		//$(".backgrd").toggleClass('backgrd_black', 3000);
+		var wse = setTimeout("document.getElementById('wide-screen-box').disabled = false", 3100);		
 		var msg = setTimeout("$(this).success('Beast Mode ENABLED')", 3100);
 	} else {
-		document.getElementById('page-style').href = 'assets/css/redmond/jquery-ui-1.8.13.custom.css';
-		//document.getElementById('searchbox').size = 39;
+		document.getElementById('page-style').href = 'assets/css/redmond/jquery-ui-1.8.13.custom.css';		
 		$(".hc-input-notes").switchClass('hc-input-notes', 'std-input-notes', 3000);
 		$(".notes-hc").switchClass('notes-hc', 'notes', 3000);
 		$(".hc-input").switchClass('hc-input', 'std-input', 3000);
@@ -1063,52 +920,8 @@ $(function () {
 	$('#copfooter').show('slide', 750);
 	$('#searcharea').show('slide', 750);
 	$('#page-options').show('slide', 750);
-	$('#shifts').show('slide', 750);
-	
-	/*$('.tooltip').tipsy({
-	title: function () {
-	return this.getAttribute('tooltip');
-	},
-	fade: true,
-	delayOut: 1,
-	gravity: $.fn.tipsy.autoWE
-	});
-	$('#searchbox').tipsy({
-	title: function () {
-	return this.getAttribute('tooltip');
-	},
-	fade: true,
-	gravity: $.fn.tipsy.autoWE
-	});
-	$('.notes-tooltip-we').tipsy({
-	title: function () {
-	return this.getAttribute('tooltip');
-	},
-	fade: true,
-	gravity: $.fn.tipsy.autoWE
-	});
-	$('.notes-tooltip-east').tipsy({
-	title: function () {
-	return this.getAttribute('tooltip');
-	},
-	fade: true,
-	gravity: 'e'
-	});
-	$('.notes-tooltip-we-reqs').tipsy({
-	title: function () {
-	return this.getAttribute('tooltip');
-	},
-	fade: true,
-	trigger: focus,
-	gravity: $.fn.tipsy.autoWE
-	});
-	$('.notes-tooltip-ns').tipsy({
-	title: function () {
-	return this.getAttribute('tooltip');
-	},
-	fade: true,
-	gravity: $.fn.tipsy.autoWE
-	});*/
+	$('#shifts').show('slide', 750);	
+
 	$("#generate").button({
 		label : "Click Here To Generate Your Notes"
 	});
@@ -1211,7 +1024,7 @@ $(function () {
 		$(".content").switchClass('content', 'content-wide', 1500);
 		$(".accordion").switchClass('accordion', 'accordion-wide', 1500);
 		document.getElementById('wide-screen-box').checked = true;
-		//document.getElementById('searchbox').size = 85;
+		
 		wscreen = true;
 		var t = setTimeout("document.getElementById('wide-screen-box').disabled = false", 1600);
 		var r = setTimeout("document.getElementById('high-contrast-box').disabled = false", 1600);

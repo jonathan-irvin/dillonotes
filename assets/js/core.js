@@ -352,7 +352,7 @@ jQuery.fn.dynReset = function () {
 jQuery.fn.dynFields = function () {
 	var pdesc = document.intro.identification.value;
 	var psec = /(port|sec)/ig;
-	var email = /(mail|outlook|exch)/ig;
+	var email = /(mail|outlook|exchange)/ig;
 	var mig = /(mig|migration)/ig;
 	var hd = /(herp|derp)/ig;
 	var bb = /(blackberry|bb|mobile phone|cell)/ig;
@@ -512,10 +512,6 @@ jQuery.fn.genNotes = function () {
 		}
 		if ((document.intro.workstation.value != "") || (document.intro.workstation.value != "NA")) {
 			document.intro.generatednotes.value += "Workstation Name: " + document.intro.workstation.value.toUpperCase() + "\n";
-		}
-		
-		if (sharedrive_info) {
-			document.intro.generatednotes.value += "Share Drive Path: " + document.intro.share_path.value + "\n";
 		}
 		
 		if (printer_info) {

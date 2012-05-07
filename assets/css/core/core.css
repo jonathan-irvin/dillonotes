@@ -1,44 +1,210 @@
-.important{color:#2e6e9e;display:block;font-size:11px;font-weight:700;margin:20px auto;width:550px}
-.important-hc{color:#b8ec79;display:block;font-size:11px;font-weight:700;margin:20px auto;width:550px}
-.accordion{align:center;margin:0 auto;width:650px}
-.show{display:block}
-.lv_validation_message{font-weight:700;margin:0 0 0 5px}
-.lv_valid{color:#0C0}
-.lv_invalid{color:#C00}
-.lv_valid_field,input.lv_valid_field:hover,input.lv_valid_field:active,textarea.lv_valid_field:hover,textarea.lv_valid_field:active{border:1px solid #0C0}
-.lv_invalid_field,input.lv_invalid_field:hover,input.lv_invalid_field:active,textarea.lv_invalid_field:hover,textarea.lv_invalid_field:active{border:1px solid #C00}
-.searchlabel{color:#000;font-size:1em}
-body.c5{font-size:.7em}
-div.c1{display:block;font-size:3em;margin:0 auto;text-align:center}
-div.c4{font-size:.8em}
-div.c2{display:none;text-align:right}
-.std-input{background:#fff;border:solid 1px #2e6e9e;color:#e17009;font-size:22px;height:22px;margin:0 auto 0 25px;padding:2px;text-align:left}
-.hc-input{background:#000;border:solid 1px #b8ec79;color:#b8ec79;font-size:22px;height:22px;margin:0 auto 0 25px;padding:2px;text-align:left}
-.std-input-notes{background:#fff;color:#e17009;font-size:10px;height:16px;padding:2px;text-align:left}
-.hc-input-notes{background:#000;color:#b8ec79;font-size:16px;height:16px;padding:2px;text-align:left}
-input[type=text].std-input-notes,textarea.std-input-notes{border:solid 1px #2e6e9e}
-input[type=text].hc-input-notes,textarea.hc-input-notes{border:solid 1px #b8ec79}
-input[type=radio]{border:none}
-select.std-input-notes{border:solid 1px #2e6e9e;height:22px}
-select.hc-input-notes{border:solid 1px #b8ec79;height:22px}
-.backgrd{background:#d0e5f5}
-.backgrd_black{background:#000}
-.backgrd_chuck{background:url(./assets/images/chucknorris.bmp)}
-.content{margin:0 auto;padding:15px;text-align:left;width:750px}
-#errmsg{background:#d0e5f5;margin:0 auto;padding:15px;text-align:left;width:750px}
-.content-wide{margin:0 auto;padding:15px;text-align:left;width:95%}
-.page-header{color:#2e6e9e;font-size:22px}
-.global-err{color:#2e6e9e;font-size:40px}
-.page-copy{color:#2e6e9e;font-size:10px}
-.page-header-hc{color:#b8ec79;font-size:22px}
-.page-copy-hc{color:#b8ec79;font-size:10px}
-.options{color:#2e6e9e;font-size:12px}
-.options-hc{color:#b8ec79;font-size:12px}
-.hidden-text{color:#d0e5f5;font-size:120px;margin:auto}
-label.notes{color:#2e6e9e;display:block;float:left;font-weight:700;width:225px}
-label.notes-hc{color:#b8ec79;display:block;float:left;font-weight:700;width:225px}
-label:after{content:": "}
-.ui-resizable-se{bottom:17px}
-.accordion-hc,.accordion-wide{align:center;margin:0 auto;width:95%}
-.hide,div.c3,.hide{display:none}
-body{font-family:Lucida Grande, Lucida Sans, Arial, sans-serif;font-size:1.1em;margin:50px 0;padding:0;text-align:center}
+/* Colors
+
+dk blue #2e6e9e;
+
+*/
+
+
+
+
+
+.important, .page-header, .global-err, .page-copy, .options, label.notes { 
+color : #2e6e9e; 
+} 
+.important, .important-hc, .show, div.c1, label.notes, label.notes-hc { 
+display : block; 
+} 
+.important, .important-hc { 
+font-size : 11px; 
+margin : 20px auto; 
+width : 550px; 
+bottom : 0; 
+position : fixed; 
+} 
+.important, .important-hc, .lv_validation_message, label.notes, label.notes-hc { 
+font-weight : 700; 
+} 
+.important-hc, .hc-input, .hc-input-notes, .page-header-hc, .page-copy-hc, .options-hc, label.notes-hc { 
+color : #b8ec79; 
+} 
+.accordion, div.c1, .content, #errmsg, .content-wide, .accordion-wide, .accordion-hc { 
+margin : 0 auto; 
+}
+
+.content-left {
+margin-right:auto;
+margin-left:0px;
+}
+
+.content-right {
+margin-right:0px;
+margin-left:auto;
+}
+ 
+.accordion { 
+width : 650px; 
+} 
+.lv_validation_message { 
+margin : 0 0 0 5px; 
+} 
+.lv_valid { 
+color : #0c0; 
+} 
+.lv_invalid { 
+color : #c00; 
+} 
+textarea.lv_valid_field:active, textarea.lv_valid_field:hover, input.lv_valid_field:active, input.lv_valid_field:hover, .lv_valid_field { 
+border : 1px solid #0c0; 
+} 
+textarea.lv_invalid_field:active, textarea.lv_invalid_field:hover, input.lv_invalid_field:active, input.lv_invalid_field:hover, .lv_invalid_field { 
+border : 1px solid #c00; 
+} 
+.searchlabel { 
+color : #000; 
+font-size : 1em; 
+} 
+body.c5 { 
+font-size : 0.7em; 
+} 
+div.c1 { 
+font-size : 3em; 
+} 
+div.c1, body { 
+text-align : center; 
+} 
+div.c4 { 
+font-size : 0.8em; 
+} 
+div.c2, .hide, div.c3, .hide { 
+display : none; 
+} 
+div.c2 { 
+text-align : right; 
+} 
+.std-input, .std-input-notes { 
+background : #fff; 
+color : #e17009; 
+} 
+.std-input, textarea.std-input-notes, input[type="text"].std-input-notes, select.std-input-notes { 
+border : 1px solid #2e6e9e; 
+} 
+.std-input, .hc-input { 
+font-size : 22px; 
+margin : 0 auto 0 25px; 
+} 
+.std-input, .hc-input, select.std-input-notes, select.hc-input-notes { 
+height : 22px; 
+} 
+.std-input, .hc-input, .std-input-notes, .hc-input-notes { 
+padding : 2px; 
+} 
+.std-input, .hc-input, .std-input-notes, .hc-input-notes, .content, #errmsg, .content-wide { 
+text-align : left; 
+} 
+.hc-input, .hc-input-notes, .backgrd_black { 
+background : #000; 
+} 
+.hc-input, textarea.hc-input-notes, input[type="text"].hc-input-notes, select.hc-input-notes { 
+border : 1px solid #b8ec79; 
+} 
+.std-input-notes, .page-copy, .page-copy-hc { 
+font-size : 10px; 
+} 
+.std-input-notes, .hc-input-notes { 
+height : 16px; 
+} 
+.hc-input-notes { 
+font-size : 16px; 
+} 
+input[type="radio"] { 
+border : none; 
+} 
+.backgrd, #errmsg { 
+background : #d0e5f5; 
+} 
+.backgrd_chuck { 
+background : url(./assets/images/chucknorris.bmp); 
+} 
+.content, #errmsg, .content-wide, .content-left, .content-right { 
+padding : 15px; 
+} 
+.content ,.content-left, .content-right{ 
+width : 375px; 
+} 
+#errmsg { 
+width : 750px; 
+} 
+.content-wide { 
+width : 98%; 
+} 
+.page-header, .page-header-hc { 
+font-size : 25px; 
+} 
+.global-err { 
+font-size : 40px; 
+} 
+.options, .options-hc { 
+font-size : 12px; 
+} 
+.hidden-text { 
+color : #d0e5f5; 
+font-size : 120px; 
+margin : auto; 
+} 
+label.notes, label.notes-hc { 
+float : left; 
+width : 175px; 
+} 
+label:after { 
+content : ":"; 
+} 
+.ui-resizable-se { 
+bottom : 17px; 
+} 
+.accordion-wide, .accordion-hc { 
+width : 95%; 
+} 
+body { 
+font : 1.1em Helvetica, lucida grande, lucida sans, arial, sans-serif; 
+margin : 50px 0; 
+padding : 0; 
+} 
+.border-red { 
+border : 3px solid #ff3000; 
+} 
+.border-grn { 
+border : 3px solid #3f0; 
+} 
+table.emq, table.emq tr, table.emq td { 
+background : white; 
+border-width : 1px; 
+border-style : solid; 
+border-color : black; 
+} 
+table.emq { 
+border-spacing : 1px; 
+border-collapse : collapse; 
+} 
+table.emq tr, table.emq td { 
+padding : 1px; 
+} 
+.ui-autocomplete { 
+max-height : 100px; 
+overflow-y : auto; 
+overflow-x : hidden; 
+padding-right : 20px; 
+} 
+* html .ui-autocomplete { 
+height : 100px; 
+} 
+.barrel_roll {
+-webkit-transition: -webkit-transform 4s ease;
+-webkit-transform: rotate(360deg);
+-moz-transition: -moz-transform 4s ease;
+-moz-transform: rotate(360deg);
+-o-transition: -o-transform 4s ease;
+-o-transform: rotate(360deg);
+transition: transform 4s ease;
+transform: rotate(360deg);
+}
+

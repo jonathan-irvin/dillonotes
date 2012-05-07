@@ -1,8 +1,7 @@
 .notice-wrap {
 	position: fixed;
-	top: 20px;
-	right: 20px;
-	width: 250px;
+	top: 0px;	
+	width: 375px;
 	z-index: 9999;
 }
 
@@ -11,7 +10,7 @@
 }
  
 .notice-item {
-	height: 60px;
+	/*height: 60px;*/
 	background: #333;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
@@ -19,7 +18,7 @@
 	padding: 6px 6px 0 6px;
 	font-family: lucida Grande;
 	font-size: 11px;
-	border: 2px solid #999;
+	border: 1px solid #999;
 	display: block;
 	position: relative;
 	margin: 0 0 12px 0;
@@ -41,6 +40,6 @@
 	font-size: 12px;
 	font-weight: bold;
 	right: 6px;
-	top: 6px;
+	top: 3px;
 	cursor: pointer;
 }

@@ -1,3 +1,31 @@
+//Globals
+
+var gVersion          = "Version 2.6b" ;
+var hcontrast         = false ;
+var wscreen           = false ;
+var aTags_distinct    = new Array() ;
+var newwindow ;
+var stayontop         = false ;
+var ishighticket ;
+var snapts            = document.lastModified;
+var curts;
+var vercnt            = 0;
+var errstatus         = 0;
+var l2mode            = 0;
+var shift             = 0;
+
+var usafe_bases       = /(^Aviano|^Spang|^Rams|^Lajes|^Moron|^Izmir|^Ankara|^Inc|^Alcon|^Laken|^Mil|^Cro|^Mol|^Upw|^Wel|^Menwith|^Fairf|^RAF)/ig;
+var migrating_bases   = /(Patrick|Cape Canaveral|AFTAC|Ascension|Antigua|Barks|Hick|Kade)/ig;
+
+//Common Issue Vars
+
+var port_security_info= false;
+var mail_info         = false;
+var migration_info    = false;
+var bb_info           = false;
+var sharedrive_info   = false;
+var printer_info      = false;
+
 jQuery.fn.updateqs = function () {
 	
 	var currentTime = new Date();
@@ -393,20 +421,17 @@ jQuery.fn.dynBase = function () {
 	var pbase = document.intro.baseloc.value;
 	
 	if (usafe_bases.test(pbase)) {
-		$('#usafe_check').switchClass('hide', 'show', 1);
+		$('#baseinfo').removeClass('hide', 1);
 	} else {
-		$('#usafe_check').switchClass('show', 'hide', 1);
+		$('#baseinfo').addClass('hide', 1);
 	}
 	
 	if (migrating_bases.test(pbase)) {
-		$('#migrating_check').switchClass('hide', 'show', 1);
+		$('#baseinfo2').removeClass('hide', 1);
 	} else {
-		$('#migrating_check').switchClass('show', 'hide', 1);
+		$('#baseinfo2').addClass('hide', 1);
 	}
-}
-jQuery.fn.dynBaseReset = function () {
-	$('#usafe_check').switchClass('show', 'hide', 1);
-	$('#migrating_check').switchClass('show', 'hide', 1);
+	
 }
 jQuery.fn.dynReset = function () {
 	//Reset Fields

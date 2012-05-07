@@ -18,7 +18,8 @@ PLT_FontPix = "8";
 PLT_DisplayElementID = "display_here";
 </script>
 <script language="JavaScript" src="assets/js/PageLoadTime.js"></script>
-<title>ESD DilloNotes</title>
+
+<title> ESD DilloNotes Beta</title>
 <!-- Style Dependencies -->
 	<link type="text/css" href="assets/css/core/core.css" rel="stylesheet"/>
 	<link type="text/css" href="assets/css/core/jquery.notice.css" rel="stylesheet"/>
@@ -36,46 +37,10 @@ PLT_DisplayElementID = "display_here";
 	<script type="text/javascript" src="assets/js/ctc.js"> </script>
 	<script type="text/javascript" src="assets/js/tz.js"> </script>
 	<script type="text/javascript" src="assets/js/passwd.js"> </script>
-	<script type="text/javascript" src="assets/js/core.js"> </script>
+	<script type="text/javascript" src="assets/js/core.min.js"> </script>
 <!-- End JavaScript Source Dependencies -->
-<!-- Global Variables -->
-<script type="text/javascript">
-	//<![CDATA[
-		//Global Vars
-			var gVersion = "Version 2.6" ;
-			var hcontrast = false ;
-			var wscreen = false ;
-			var aTags_distinct = new Array() ;
-			var newwindow ;
-			var stayontop = false ;
-			var ishighticket ;
-			var snapts = document.lastModified;
-			var curts;
-			var vercnt = 0;
-			var errstatus = 0;
-			var l2mode = 0;
-			var shift = 0;
-			
-			var is_usafe = false;
-			var is_migrating = false;
-
-			var usafe_bases = /(^Aviano|^Spang|^Rams|^Lajes|^Moron|^Izmir|^Ankara|^Inc|^Alcon|^Laken|^Mil|^Cro|^Mol|^Upw|^Wel|^Menwith|^Fairf|^RAF)/ig;
-			var migrating_bases = /(Patrick|Cape Canaveral|AFTAC|Ascension|Antigua|Barks|Hick|Elmen|vance)/ig;
-
-			//Common Issue Vars
-
-			var port_security_info = false;
-			var mail_info = false;
-			var migration_info = false;
-			var bb_info = false;
-			var sharedrive_info = false;
-			var printer_info = false;
-	//]]>
-</script>
-<!-- End Global Variables -->
-
 </head>
-<body class="c5 content" id="bodyelm" onLoad="UpdateClocks();password();setInterval(function () {$(this).dynFields();},1000);">
+<body class="c5 content" id="bodyelm" onLoad="UpdateClocks();password();setInterval(function () {$(this).dynFields()},1000);">
 <div id="error" class="ui-state-error ui-corner-all hide" style="position:fixed;float:center;top:0px;width:400px;height:50px;z-index:2000">
 </div>
 <div id="search-cop-dialog" title="Search the CoP" style="display:none">
@@ -84,7 +49,7 @@ PLT_DisplayElementID = "display_here";
 	</p>
 </div>
 </div>
-<span id="copheader" class="page-header hide">DilloNotes</span>
+<span id="copheader" class="page-header hide">DilloNotes Beta</span>
 <div class="accordion">
 <h3><a href="#">TimeZone Quick Reference (Click to Toggle)</a></h3>
 <div id="tzqr">
@@ -156,7 +121,7 @@ PLT_DisplayElementID = "display_here";
 			<div>
 				<ul>
 					<li>
-					<a href="https://www.procastime.com/time/iii/library/usermgmt/login.aspx" target="_blank">Procas Timesheet (Triple i Timesheet)</a>
+					<a href="https://www.procastime.com/time/iii/library/usermgmt/login.aspx" target="_blank">Procas Timesheet (Triple I Timesheet)</a>
 					</li>
 					<li>
 					<a href="https://timecollection.induscorp.com/DeltekTC/welcome.msv" target="_blank">Deltek Timesheet (INDUS Timesheet)</a>
@@ -181,7 +146,7 @@ PLT_DisplayElementID = "display_here";
 					<a href="https://golearn.csd.disa.mil/kc/login/login.asp"> Advanced Distributed Learning Services (ADLS)</a>
 					</li>
 					<li>
-					<a href="https://52mpls-ra-001/dra/" target="_blank">*WEB DRA* AFNet DRA (Web)</a>
+					<a href="https://esd.dra.us.af.mil/dra/" target="_blank">*WEB DRA* AFNet DRA (Web)</a>
 					</li>
 					<li>
 					<a href="https://wwwmil.usafe.af.mil/remedy/shared/login.jsp" target="_blank">*WEB REMEDY* USAFE Remedy (Web)</a>
@@ -208,7 +173,7 @@ PLT_DisplayElementID = "display_here";
 	<div id="section-2">
 		<div>
 			<div>
-				<form name="intro" id="intform" class="notes" method="post" onreset="javascript:$(this).resetValidation();$(this).gReset();" onkeyup="javascript:$(this).genNotes();">
+				<form name="intro" id="intform" class="notes" method="post" onreset="javascript:$(this).resetValidation();$(this).gReset();$(this).dynReset();" onkeyup="javascript:$(this).genNotes();">
 					<div style="color:red;font-weight:700" align="center">DO NOT ENTER CLASSIFIED INFORMATION</div><br>
 					<h3>Get the Basics</h3>
 					<div id="basic1" class="show">					
@@ -230,12 +195,12 @@ PLT_DisplayElementID = "display_here";
 						</div>
 						<br>
 						<label class="notes" for="baseloc">What base?:</label>
-						<input type="text" name="baseloc" id="blist" onkeyup="javascript:$(this).dynBaseReset();" onblur="javascript:$(this).dynBase();" onfocus="javascript:$(this).dynBase();" class="notes-tooltip-we-reqs std-input-notes">
-						<div id="usafe_check" class="hide" align="center">
+						<input type="text" name="baseloc" id="blist" onkeyup="javascript:$(this).dynBase();" class="notes-tooltip-we-reqs std-input-notes">
+						<div id="baseinfo" class="hide" align="center">
 							<br>
 							<span style="font-weight:700;color:blue">THIS IS A USAFE BASE</span>							
 						</div>
-						<div id="migrating_check" class="hide" align="center">
+						<div id="baseinfo2" class="hide" align="center">
 							<br>
 							<span style="font-weight:700;color:green">THIS IS A MIGRATING BASE<br>CHECK TURNOVER FOR ROUTING PROCEDURES</span>							
 						</div>
@@ -302,9 +267,11 @@ PLT_DisplayElementID = "display_here";
 							<option value="workstation">Workstation Issues</option>
 						</select>
 						
-						<!--<label class="notes" for="numaffected">Total Impacted:</label>
-					<input type="text" name="numaffected" id="numafft" class="notes-tooltip-we-reqs std-input-notes" value=1 tooltip="How many users or workstations are affected, if any?">					
-					<br>-->
+					<!--
+						<label class="notes" for="numaffected">Total Impacted:</label>
+						<input type="text" name="numaffected" id="numafft" class="notes-tooltip-we-reqs std-input-notes" value=1 tooltip="How many users or workstations are affected, if any?">					
+						<br>
+					-->
 						<fieldset>
 						<legend>The Basics</legend>
 							<label class="notes" class="notes" for="edipi">EDI PI#:</label>
@@ -572,6 +539,8 @@ PLT_DisplayElementID = "display_here";
 						</ul>
 					</li>
 					<li>Added USAFE Base detection, adds a notice at the top of the notes</li>
+					<li>Added Migrating Base detection, adds a notice at the top of the notes</li>
+					<li>Increased the font size of the timezone area for better readability</li>
 				</ul>
 			</div>
 
@@ -721,10 +690,10 @@ PLT_DisplayElementID = "display_here";
 			<div>
 				<ul>
 					<div id="page-options" class="hide">
-                              <li><input id="high-contrast-box" class="ui-widget tooltip" name="high-contrast-setting" type="checkbox" onclick="javascript:$(this).high_contrast(this.checked)"> <span class="options">Beast Mode</span></input></li>
-                              <li><input id="wide-screen-box" class="ui-widget tooltip" name="wide-screen-setting" type="checkbox" onclick="javascript:$(this).wide_screen(this.checked)"> <span class="options">Wide-Screen</span></input></li>
-                              <li><input id="l2-mode" class="ui-widget tooltip" type="checkbox" name="level2mode" value="true" onclick="javascript:$(this).toggleLevelII();"> <span class="options">Condensed Mode</span></li>
-                         </div>
+						<li><input id="high-contrast-box" class="ui-widget tooltip" name="high-contrast-setting" type="checkbox" onclick="javascript:$(this).high_contrast(this.checked)"> <span class="options">Beast Mode</span></input></li>
+						<li><input id="wide-screen-box" class="ui-widget tooltip" name="wide-screen-setting" type="checkbox" onclick="javascript:$(this).wide_screen(this.checked)"> <span class="options">Wide-Screen</span></input></li>
+						<li><input id="l2-mode" class="ui-widget tooltip" type="checkbox" name="level2mode" value="true" onclick="javascript:$(this).toggleLevelII();"> <span class="options">Condensed Mode</span></li>
+					</div>
 				</ul>
 			</div>
 		</div>
@@ -740,7 +709,7 @@ PLT_DisplayElementID = "display_here";
 	<br>
 	<script language="Javascript">document.write(sDate(Date(0)));</script>
 	<br><br>
-	<span id="display_here"></span>	
+	<span id="display_here"></span>
 </div>
 <span id="plug" class="hidden-text"></span>
 </body>

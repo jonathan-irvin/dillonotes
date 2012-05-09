@@ -28,6 +28,9 @@ var bb_info = false;
 var sharedrive_info = false;
 var printer_info = false;
 
+//Global Base List
+baselist = ["Ahmed Al Jaber AB KW", "Al Dhafra AB UAE", "Al Musnana AB OM", "Al Udeid AB QA", "Ali Al Salem AB KW", "Allen C. Thompson Field, MS", "Alpena County RAP, MI", "Altus AFB, OK", "Andersen AFB", "Andrews AFB, MD", "Ankara AS", "Araxos AB", "Arnold AFB, TN", "Aruba", "Atlantic City ANGB, NJ", "Aviano AB (USAFE)", "Bangor ANGB, ME", "Barksdale AFB, LA", "Barnes ANGB, MA", "Battle Creek ANGB, MI", "Beale AFB, CA", "Bellows AFS, HI", "Bergstrom ARS,TX", "Berry Field ANGB, TN", "Birmingham IAP, AL", "Bitburg AB", "Bolling AFB, DC", "Borinquen AP, PR", "Bradley ANGB, CT", "Brooks City-Base, TX", "Buckley AFB, CO", "Burgas AP", "Burlington IAP, VT", "Byrd Field, VA", "Cannon AFB, NM", "Capital MAP, IL", "Channel Islands ANGS, CA", "Charleston AFB, SC", "Charlotte/Douglas IAP, NC", "Cheong Ju (Chongju) AB, ROK", "Cheyenne MAP, WY", "Clark AB, PL", "Clear AFS, AK", "Columbus AFB, MS", "Comalapa AB", "Comiso AB", "Costa Mesa ANGS", "Creech AFB, NV", "Curacao", "Dannelly Field AGS, AL", "Davis-Monthan AFB, AZ", "Decimomannu AB", "Des Moines IAP, IA", "Dhahr AB SA", "Diego Garcia BIOT", "Dobbins JARB, GA", "Doha IAP QA", "Dover AFB, DE", "Duke Field, FL", "Duluth ANGB, MN", "Dyess AFB, TX", "Ebbing ANGB, AR", "Edwards AFB, CA", "Eglin AFB, FL", "Eielson AFB, AK", "Einsiedlerhof AS", "Ellington Field, TX", "Ellsworth AFB, SD", "Elmendorf AFB, AK", "England AFB, LA", "Eskan Village SA", "F. E. Warren AFB, WY", "Fairchild AFB, WA", "Forbes Field, KS", "Fort Smith MAP, AR", "Fort Wayne IAP, IN", "Fort Worth JRB, TX (Carswell AFB)", "Francis Gabreski ANGB, NY", "Fresno ANGB, CA", "Fujairah IAP UAE", "Galena Airport", "Geilenkirchen AB", "General Mitchell ARS, WI", "George AFB, CA", "Ghedi AB", "Gila Bend AAF, AZ", "Goodfellow AFB, TX", "Gowen Field ANGB, ID", "Grand Forks AFB, ND", "Great Falls IAP, MT", "Griffiss AFB, NY", "Grissom JARB, IN", "Gulfport-Biloxi IAP, MS", "Hahn AB", "Hancock Field ANGB, NY", "Hanscom AFB, MA", "Harrisburg IAP, PA", "Hector IAP, ND", "Hellenkion AB", "Hensley Field/NAS Dallas, TX", "Hickam AFB, HI", "Hill AFB, UT", "Holloman AFB, NM", "Homestead JARB, FL", "Howard AFB", "Hulman RAP, IN", "Hurlburt Field, FL", "Incirlik AB", "Indian Springs AAF, NV", "Izmir AS", "Jacksonville IAP, FL", "Jeddah AB SA", "Joe Foss Field, SD", "Kadena AB, JP", "Keesler AFB, MS", "Keflavik NAS, IC ", "Kegelman AAF, OK", "Kelly AFB, TX", "Key Field, MS", "Khamis Mushayt AB SA", "Khobar Towers SA", "Kimhae (Gimhae) AB, ROK", "King Khalid Military City SA", "Kingsley Field, OR", "Kirtland AFB, NM", "Kulis ANGB, AK", "Kunsan AB, ROK", "Kuwait IAP KW", "Kwangju (Gwangju) AB, ROK", "Lackland AFB, TX", "Lajes Field, AZR", "Lambert-St. Louis IAP, MO", "Langley AFB, VA", "Laughlin AFB, TX", "Lincoln MAP, NE", "Lindsey AS", "Little Rock AFB, AR", "Los Angeles AFB, CA", "Lowry AFB, CO", "Luke AFB, AZ", "MacDill AFB, FL", "Malmstrom AFB, MT", "Mansfield Lahm AP, OH", "Manta AB", "March JARB, CA", "Martin State AP, MD", "Masirah OM", "Mather AFB, CA", "Maxwell-Gunter AFB, AL", "McChord AFB, WA", "McClellan AFB, CA", "McConnell AFB, KS", "McEntire ANGB,SC", "McGhee Tyson ANGB, TN", "McGuire AFB, NJ", "Memphis IAP, TN", "Minneapolis-St. Paul JARS, MN", "Minot AFB, ND", "Misawa AB, JP", "Moffett Field, CA", "Moody AFB, GA", "Morón AB", "Mostar AB", "Mountain Home AFB, ID", "Muharraq BH", "Muñiz ANGB, PR", "Nashville IAP, TN", "Nellis AFB, NV", "New Castle County AP, DE", "New Orleans JRB, LA", "Newark AFB, OH", "Niagara Falls JARS, NY", "North Highlands ANGS, CA", "Offutt AFB, NB", "O'Hare ARS, IL", "Okuma, JP", "Ontario AGS, CA", "Osan AB, ROK", "Other", "Otis ANGB, MA", "Patrick AFB, FL", "Paya Lebar AB, SG", "Pease ANGB, NH", "Peoria AP, IL", "Peterson AFB, CO", "Pittsburgh IAP, PA", "Pittsburgh JARS, PA", "Pope AFB, NC", "Portland IAP, OR", "Prince Sultan AB SA", "Pusan (Busan) AB, ROK", "Quonset State AAP, RI", "RAF Alconbury", "RAF Fairford", "RAF Lakenheath", "RAF Mildenhall", "RAF Molesworth", "RAF Upwood", "Ramstein AB", "Randolph AFB, TX", "Reese AFB, TX", "Reno-Tahoe IAP, NV", "Rhein-Main AB", "Richards-Gebaur ARS, MO", "Richmond IAP, VA", "Rickenbacker ANGB, OH", "Riyadh AB SA", "Robins AFB, GA", "Rosecrans MAP, MO", "Roslyn ANGS, NY", "Sachon AB, ROK", "Salt Lake City IAP, UT", "San Vito del Normanni AS", "Savannah IAP, GA", "Schenectady AP, NY", "Schriever AFB, CO", "Scott AFB, IL", "Seattle ANGB, WA", "Seeb AB OM", "Selfridge ANGB, MI", "Sembach AB", "Seymour Johnson AFB, NC", "Shaheed Mwaffaq AB JO", "Shaikh Isa AB BH", "Shaw AFB, SC", "Shepherd AGS, WV", "Sheppard AFB, TX", "Sioux Gateway AP, IA", "Sky Harbor IAP, AZ", "Soesterberg AB", "Soto Cano AB", "Spangdahlem AB", "Springfield ANGB, OH", "Standiford Field, DY", "Stavanger AB", "Stewart ANGB, NY", "Stratton ANGB, NY", "Suwon AB, ROK", "Tabuk AB SA", "Taegu (Daegu) AB, ROK", "Taif AB SA", "Taszar AB", "Thompson Field ANGB, MS", "Thumrait AB OM", "Tinker AFB, OK", "Toledo Express AP, OH", "Tonopah AFS, NV", "Travis AFB, CA", "Tres Esquinas AB", "Truax Field, WI", "Tucson IAP, AZ", "Tulsa IAP, OK", "Tuzla AB", "Tyndall AFB, FL", "USAF Academy, CO", "Utapao AB, TH", "Vance AFB, OK", "Vandenberg AFB, CA", "Volk Field ANGB, WI", "W.K. Kellogg AP, MI", "Wallace AS, PL", "Westover JARB, MA", "White Oak, MD", "Whiteman AFB, MO", "Will Rogers ANGB, OK", "Williams AFB, AZ", "Willow Grove NAS, PA", "Wright-Patterson AFB, OH", "Yeager AGS, WV", "Yechon (Yecheon) AB, ROK", "Yokota AB, JP", "Youngstown JARS, OH", "Zaragoza AB", "Zweibrucken AB", "Menwith Hill AB"];	
+
 (function( $ ) {
 	$.fn.updateqs = function () {		
 		var currentTime = new Date();
@@ -808,9 +811,7 @@ $(window).resize(function () {
 	$("#popout").button("option", "position", "left");
 });
 jQuery(function ($) {
-	$('#errmsg').addClass('hide', 0);
-	baselist = ["Ahmed Al Jaber AB KW", "Al Dhafra AB UAE", "Al Musnana AB OM", "Al Udeid AB QA", "Ali Al Salem AB KW", "Allen C. Thompson Field, MS", "Alpena County RAP, MI", "Altus AFB, OK", "Andersen AFB", "Andrews AFB, MD", "Ankara AS", "Araxos AB", "Arnold AFB, TN", "Aruba", "Atlantic City ANGB, NJ", "Aviano AB (USAFE)", "Bangor ANGB, ME", "Barksdale AFB, LA", "Barnes ANGB, MA", "Battle Creek ANGB, MI", "Beale AFB, CA", "Bellows AFS, HI", "Bergstrom ARS,TX", "Berry Field ANGB, TN", "Birmingham IAP, AL", "Bitburg AB", "Bolling AFB, DC", "Borinquen AP, PR", "Bradley ANGB, CT", "Brooks City-Base, TX", "Buckley AFB, CO", "Burgas AP", "Burlington IAP, VT", "Byrd Field, VA", "Cannon AFB, NM", "Capital MAP, IL", "Channel Islands ANGS, CA", "Charleston AFB, SC", "Charlotte/Douglas IAP, NC", "Cheong Ju (Chongju) AB, ROK", "Cheyenne MAP, WY", "Clark AB, PL", "Clear AFS, AK", "Columbus AFB, MS", "Comalapa AB", "Comiso AB", "Costa Mesa ANGS", "Creech AFB, NV", "Curacao", "Dannelly Field AGS, AL", "Davis-Monthan AFB, AZ", "Decimomannu AB", "Des Moines IAP, IA", "Dhahr AB SA", "Diego Garcia BIOT", "Dobbins JARB, GA", "Doha IAP QA", "Dover AFB, DE", "Duke Field, FL", "Duluth ANGB, MN", "Dyess AFB, TX", "Ebbing ANGB, AR", "Edwards AFB, CA", "Eglin AFB, FL", "Eielson AFB, AK", "Einsiedlerhof AS", "Ellington Field, TX", "Ellsworth AFB, SD", "Elmendorf AFB, AK", "England AFB, LA", "Eskan Village SA", "F. E. Warren AFB, WY", "Fairchild AFB, WA", "Forbes Field, KS", "Fort Smith MAP, AR", "Fort Wayne IAP, IN", "Fort Worth JRB, TX (Carswell AFB)", "Francis Gabreski ANGB, NY", "Fresno ANGB, CA", "Fujairah IAP UAE", "Galena Airport", "Geilenkirchen AB", "General Mitchell ARS, WI", "George AFB, CA", "Ghedi AB", "Gila Bend AAF, AZ", "Goodfellow AFB, TX", "Gowen Field ANGB, ID", "Grand Forks AFB, ND", "Great Falls IAP, MT", "Griffiss AFB, NY", "Grissom JARB, IN", "Gulfport-Biloxi IAP, MS", "Hahn AB", "Hancock Field ANGB, NY", "Hanscom AFB, MA", "Harrisburg IAP, PA", "Hector IAP, ND", "Hellenkion AB", "Hensley Field/NAS Dallas, TX", "Hickam AFB, HI", "Hill AFB, UT", "Holloman AFB, NM", "Homestead JARB, FL", "Howard AFB", "Hulman RAP, IN", "Hurlburt Field, FL", "Incirlik AB", "Indian Springs AAF, NV", "Izmir AS", "Jacksonville IAP, FL", "Jeddah AB SA", "Joe Foss Field, SD", "Kadena AB, JP", "Keesler AFB, MS", "Keflavik NAS, IC ", "Kegelman AAF, OK", "Kelly AFB, TX", "Key Field, MS", "Khamis Mushayt AB SA", "Khobar Towers SA", "Kimhae (Gimhae) AB, ROK", "King Khalid Military City SA", "Kingsley Field, OR", "Kirtland AFB, NM", "Kulis ANGB, AK", "Kunsan AB, ROK", "Kuwait IAP KW", "Kwangju (Gwangju) AB, ROK", "Lackland AFB, TX", "Lajes Field, AZR", "Lambert-St. Louis IAP, MO", "Langley AFB, VA", "Laughlin AFB, TX", "Lincoln MAP, NE", "Lindsey AS", "Little Rock AFB, AR", "Los Angeles AFB, CA", "Lowry AFB, CO", "Luke AFB, AZ", "MacDill AFB, FL", "Malmstrom AFB, MT", "Mansfield Lahm AP, OH", "Manta AB", "March JARB, CA", "Martin State AP, MD", "Masirah OM", "Mather AFB, CA", "Maxwell-Gunter AFB, AL", "McChord AFB, WA", "McClellan AFB, CA", "McConnell AFB, KS", "McEntire ANGB,SC", "McGhee Tyson ANGB, TN", "McGuire AFB, NJ", "Memphis IAP, TN", "Minneapolis-St. Paul JARS, MN", "Minot AFB, ND", "Misawa AB, JP", "Moffett Field, CA", "Moody AFB, GA", "Morón AB", "Mostar AB", "Mountain Home AFB, ID", "Muharraq BH", "Muñiz ANGB, PR", "Nashville IAP, TN", "Nellis AFB, NV", "New Castle County AP, DE", "New Orleans JRB, LA", "Newark AFB, OH", "Niagara Falls JARS, NY", "North Highlands ANGS, CA", "Offutt AFB, NB", "O'Hare ARS, IL", "Okuma, JP", "Ontario AGS, CA", "Osan AB, ROK", "Other", "Otis ANGB, MA", "Patrick AFB, FL", "Paya Lebar AB, SG", "Pease ANGB, NH", "Peoria AP, IL", "Peterson AFB, CO", "Pittsburgh IAP, PA", "Pittsburgh JARS, PA", "Pope AFB, NC", "Portland IAP, OR", "Prince Sultan AB SA", "Pusan (Busan) AB, ROK", "Quonset State AAP, RI", "RAF Alconbury", "RAF Fairford", "RAF Lakenheath", "RAF Mildenhall", "RAF Molesworth", "RAF Upwood", "Ramstein AB", "Randolph AFB, TX", "Reese AFB, TX", "Reno-Tahoe IAP, NV", "Rhein-Main AB", "Richards-Gebaur ARS, MO", "Richmond IAP, VA", "Rickenbacker ANGB, OH", "Riyadh AB SA", "Robins AFB, GA", "Rosecrans MAP, MO", "Roslyn ANGS, NY", "Sachon AB, ROK", "Salt Lake City IAP, UT", "San Vito del Normanni AS", "Savannah IAP, GA", "Schenectady AP, NY", "Schriever AFB, CO", "Scott AFB, IL", "Seattle ANGB, WA", "Seeb AB OM", "Selfridge ANGB, MI", "Sembach AB", "Seymour Johnson AFB, NC", "Shaheed Mwaffaq AB JO", "Shaikh Isa AB BH", "Shaw AFB, SC", "Shepherd AGS, WV", "Sheppard AFB, TX", "Sioux Gateway AP, IA", "Sky Harbor IAP, AZ", "Soesterberg AB", "Soto Cano AB", "Spangdahlem AB", "Springfield ANGB, OH", "Standiford Field, DY", "Stavanger AB", "Stewart ANGB, NY", "Stratton ANGB, NY", "Suwon AB, ROK", "Tabuk AB SA", "Taegu (Daegu) AB, ROK", "Taif AB SA", "Taszar AB", "Thompson Field ANGB, MS", "Thumrait AB OM", "Tinker AFB, OK", "Toledo Express AP, OH", "Tonopah AFS, NV", "Travis AFB, CA", "Tres Esquinas AB", "Truax Field, WI", "Tucson IAP, AZ", "Tulsa IAP, OK", "Tuzla AB", "Tyndall AFB, FL", "USAF Academy, CO", "Utapao AB, TH", "Vance AFB, OK", "Vandenberg AFB, CA", "Volk Field ANGB, WI", "W.K. Kellogg AP, MI", "Wallace AS, PL", "Westover JARB, MA", "White Oak, MD", "Whiteman AFB, MO", "Will Rogers ANGB, OK", "Williams AFB, AZ", "Willow Grove NAS, PA", "Wright-Patterson AFB, OH", "Yeager AGS, WV", "Yechon (Yecheon) AB, ROK", "Yokota AB, JP", "Youngstown JARS, OH", "Zaragoza AB", "Zweibrucken AB", "Menwith Hill AB"];
-	$(this).populate();
+	$('#errmsg').addClass('hide', 0);	
 	$(this).resetValidation();
 	// Accordion
 	$(".accordion").accordion({
@@ -826,10 +827,8 @@ jQuery(function ($) {
 		
 	});
 	// Tabs
-	$('#section').tabs({
-		cache : true
-	});
-	
+	$('#section').tabs({cache : true});
+		
 	$('#section').show('slide', 750);
 	$('#copheader').show('slide', 750);
 	$('#copfooter').show('slide', 750);
@@ -837,12 +836,6 @@ jQuery(function ($) {
 	$('#page-options').show('slide', 750);
 	$('#shifts').show('slide', 750);	
 
-	$("#generate").button({
-		label : "Click Here To Generate Your Notes"
-	});
-	$("#generate").click(function () {
-		$(this).genNotes();
-	});
 	$(".greset").button({
 		label : "Reset All Fields"
 	});
@@ -855,79 +848,10 @@ jQuery(function ($) {
 		minLength : 1,
 		delay : 0
 	});
-	$("#gobutton").button({
-		label : "Go",
-		icons : {
-			primary : 'ui-icon-check'
-		},
-		text : false
-	}).click(function () {
-		$(this).submit();
-		return false;
-	});
-	
-	$("#csearch").submit(function () {
-		$(this).opencop();
-		return false;
-	});
-	
-	$("#resetbutton").button({
-		label : "Reset",
-		icons : {
-			primary : 'ui-icon-refresh'
-		},
-		text : false
-	}).click(function () {
-		document.getElementById('searchbox').value = '';
-	});
-	$("#popout").button({
-		label : "ESD Portal",
-		icons : {
-			primary : 'ui-icon-extlink'
-		}
-	}).click(function () {
-		$(this).poptastic('https://esd.us.af.mil/sop/_layouts/Authenticate.aspx?Source=%2Fsop%2Fdefault%2Easpx');
-	});
-	$("#stayontop").button({
-		label : "Toggle Stay On Top",
-		icons : {
-			primary : 'ui-icon-locked'
-		}
-	}).click(function () {
-		$(this).sot();
-	});
-	$('#search-cop-dialog').dialog({
-		autoOpen : false,
-		resizable : false,
-		modal : true,
-		width : 400,
-		height : 150,
-		overlay : {
-			backgroundColor : "#000",
-			opacity : 0.75
-		},
-		buttons : {
-			"Search The CoP" : function () {
-				window.location = "https://afkm.wpafb.af.mil/Search/VivisimoSearch.aspx?Filter=AE-SC-00-10&v%3Aproject=vse_main&v%3Asources=vse_int_ext_fe&CoPSearch=TRUE&query=" + document.getElementById('searchbox').value + "&";
-				$(this).dialog('close');
-			},
-			"Close" : function () {
-				$(this).dialog('close');
-			}
-		}
-	});
+
 	$('#bodyelm').addClass('backgrd', 1500);
 	
 	//Inbox
-	
-	$("#stayontop").button({
-		label : "Toggle Stay On Top",
-		icons : {
-			primary : 'ui-icon-locked'
-		}
-	}).click(function () {
-		$(this).sot();
-	});
 	
 	$("#updatename").button({
 		label : "Update",

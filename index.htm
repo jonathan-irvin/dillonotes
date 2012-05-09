@@ -31,9 +31,7 @@ PLT_DisplayElementID = "display_here";
 	<!--<script type="text/javascript" src="assets/js/firebug-lite/build/firebug-lite.js"> </script>-->
 	<script type="text/javascript" src="assets/js/jq-1.7.2.js"> </script>
 	<script type="text/javascript" src="assets/js/jqui-1.8.20.js"> </script>
-	<script type="text/javascript" src="assets/js/jq.notice.js"> </script>
-	<script type="text/javascript" src="assets/js/tipsy/src/javascripts/jquery.tipsy.js"> </script>
-	<script type="text/javascript" src="assets/js/jq.validation.js"> </script>
+	<script type="text/javascript" src="assets/js/jq.notice.js"> </script>	
 	<script type="text/javascript" src="assets/js/jq.textarea.exp.js"> </script>
 	<script type="text/javascript" src="assets/js/jqtxtfx.js"> </script>
 	<script type="text/javascript" src="assets/js/ctc.js"> </script>
@@ -43,37 +41,36 @@ PLT_DisplayElementID = "display_here";
 <!-- End JavaScript Source Dependencies -->
 </head>
 <body class="c5 content" id="bodyelm" onLoad="UpdateClocks();password();setInterval(function () {$(this).dynFields()},1000);">
-<div id="error" class="ui-state-error ui-corner-all hide" style="position:fixed;float:center;top:0px;width:400px;height:50px;z-index:2000"></div>
 <span id="copheader" class="page-header hide">DilloNotes v2.6 Beta</span>
 <div class="accordion">
-<h3><a href="#">TimeZone Quick Reference (Click to Toggle)</a></h3>
-<div id="tzqr">
-	<table border="0" cellspacing="0" width="100%">
-		<tr bgcolor="black" style="font-family: Helvetica, Verdana, Tahoma, Arial; font-size: small">
-			<td ID="Clock4" width="20%" align="center">		</td>
-			<td ID="Clock0" width="20%" align="center">		</td>
-			<td ID="Clock1" width="20%" align="center">		</td>
-			<td ID="Clock2" width="20%" align="center">		</td>
-			<td ID="Clock3" width="20%" align="center">		</td>
-		</tr>
-		<tr bgcolor="black" style="font-family: Helvetica, Verdana, Tahoma, Arial; font-size: small">
-			<td ID="Clock6" width="20%" align="center">		</td>
-			<td ID="Clock8" width="20%" align="center">		</td>
-			<td ID="Clock9" width="20%" align="center">		</td>
-			<td ID="Clock5" width="20%" align="center">		</td>
-			<td ID="Clock7" width="20%" align="center">		</td>
-		</tr>
-	</table>
-</div>
+	<h3><a href="#">TimeZone Quick Reference (Click to Toggle)</a></h3>
+	<div id="tzqr">
+		<table border="0" cellspacing="0" width="100%">
+			<tr bgcolor="black" style="font-family: Helvetica, Verdana, Tahoma, Arial; font-size: small">
+				<td ID="Clock4" width="20%" align="center">		</td>
+				<td ID="Clock0" width="20%" align="center">		</td>
+				<td ID="Clock1" width="20%" align="center">		</td>
+				<td ID="Clock2" width="20%" align="center">		</td>
+				<td ID="Clock3" width="20%" align="center">		</td>
+			</tr>
+			<tr bgcolor="black" style="font-family: Helvetica, Verdana, Tahoma, Arial; font-size: small">
+				<td ID="Clock6" width="20%" align="center">		</td>
+				<td ID="Clock8" width="20%" align="center">		</td>
+				<td ID="Clock9" width="20%" align="center">		</td>
+				<td ID="Clock5" width="20%" align="center">		</td>
+				<td ID="Clock7" width="20%" align="center">		</td>
+			</tr>
+		</table>
+	</div>
 </div>
 <div id="shifts" align="center" class="hide">
-<table border="0" cellspacing="0" width="100%">
-		<tr>
-			<td><div class="shift"><a href="#" onclick="javascript:$(this).shiftLeft()">Shift Left</a></div></td>
-			<td><div class="shift"><a href="#" onclick="javascript:$(this).shiftReset()">Shift Center</a></div></td>
-			<td><div class="shift"><a href="#" onclick="javascript:$(this).shiftRight()">Shift Right</a></div></td>
-		</tr>
-</table>
+	<table border="0" cellspacing="0" width="100%">
+			<tr>
+				<td><div class="shift"><a href="#" onclick="javascript:$(this).shiftLeft()">Shift Left</a></div></td>
+				<td><div class="shift"><a href="#" onclick="javascript:$(this).shiftReset()">Shift Center</a></div></td>
+				<td><div class="shift"><a href="#" onclick="javascript:$(this).shiftRight()">Shift Right</a></div></td>
+			</tr>
+	</table>
 </div>
 <div id="errmsg">
 	<span class="global-err"><b>Loading...Please Wait</b></span>
@@ -244,29 +241,9 @@ PLT_DisplayElementID = "display_here";
 					<div id="hightxtpoc" class="hide">
 						<label class="notes" for="highpoc">High Ticket 24-Hr. POC:</label>
 						<input type="text" name="highpoc" id="hpoc" class="notes-tooltip-we-reqs std-input-notes" tooltip="Required for HIGH tickets! Include name and DSN" size='30'>
-					</div>
-					<!--
-						<label class="notes hide" for="isiao3">POC is CSA/CST?:</label>
-						<input type="checkbox" name="isiao3" value="CSA" class="notes-tooltip-ns std-input-notes radio hide" tooltip="POC is a CSA">CSA <br>
-						<label class="notes hide" for="isiao4">POC is CFP?:</label>
-						<input type="checkbox" name="isiao4" value="CFP" class="notes-tooltip-ns std-input-notes radio hide" tooltip="POC is with Comm Focal Point">CFP
-					-->
+					</div>					
 					<div id="basic2" class="show">
-					<h3>Gather Info</h3>						
-						<!--<label class="notes" for="calldrivers">Common Issues*:</label>-->
-						
-						<select name="calldrivers" class="notes-tooltip-we std-input-notes hide" tooltip="Here's a list of common issues. Does the issue match one in the list?" style="font-size:14px;border 0px" onfocus="javascript:$(this).toggleCommon();" onblur="javascript:$(this).toggleCommon();" onclick="javascript:$(this).toggleCommon();">
-							<option value="" selected="selected">---</option>
-							<option value="migration">Migration Issues</option>
-							<option value="printer">Printer Issues</option>
-							<option value="workstation">Workstation Issues</option>
-						</select>
-						
-					<!--
-						<label class="notes" for="numaffected">Total Impacted:</label>
-						<input type="text" name="numaffected" id="numafft" class="notes-tooltip-we-reqs std-input-notes" value=1 tooltip="How many users or workstations are affected, if any?">					
-						<br>
-					-->
+					<h3>Gather Info</h3>
 						<fieldset>
 						<legend>The Basics</legend>
 							<label class="notes" class="notes" for="edipi">EDI PI#:</label>
@@ -406,23 +383,6 @@ PLT_DisplayElementID = "display_here";
 						<label class="notes" for="dsecontents">Paste DSE Here --->:</label>
 						<textarea cols="55" rows="10" id="dsecont" name="dsecontents" class="expand50-300 std-input-notes"></textarea>
 					</div>
-					<!-- Per Ops, DW, Removed from DilloNotes 3/12/2012 -->
-					<!--<br/><br/>-->
-					<!--<h3>Route or Resolve</h3>-->
-					<!--<label class="notes" for="resolution">Final Statement:</label>-->
-					<select name="resolution" class="notes-tooltip-we std-input-notes hide" tooltip="Select a closing/forwarding statement" style="font-size:14px;border 0px" onclick="javascript:$(this).genNotes();">
-						<option value="Routing to EMs" selected="selected">Recommend a closing action...</option>
-						<option value="Setting to Resolved">Issue is Resolved</option>
-						<option value="Setting to Closed; Provided information to Caller">Informational/Inquiry</option>
-						<option value="Routing to ESD Acct Mgt">Route to AM Queue</option>
-						<option value="Routing to Callback Queue">Route to Callback</option>
-						<option value="Routing to ADX Migration">Route to ADX</option>
-						<option value="Routing to EMs">Route to EMs</option>
-						<option value="Routing to Remote Admin">Route to RA</option>
-
-					</select>
-					<textarea cols="48" rows="3" name="resolution-cust" id="resarea-cust" class="notes-tooltip-we-reqs expand75-100 std-input-notes hide" tooltip="Did ya fix it? Sweet! What was the end result of your troubleshooting? Didn't fix it? No worries, put a brief set of instructions that need to be done e.g. 'Route to EMs' or 'Assigned to Level 2 AM'"></textarea>
-					<br/><br/>
 					<h3>Copy into Remedy</h3>
 					<div id="basic4"></div>
 					<fieldset>

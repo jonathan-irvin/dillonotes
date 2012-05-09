@@ -29,13 +29,11 @@ var sharedrive_info = false;
 var printer_info = false;
 
 (function( $ ) {
-	$.fn.updateqs = function () {
-		
+	$.fn.updateqs = function () {		
 		var currentTime = new Date();
 		var month = currentTime.getMonth() + 1;
 		var day = currentTime.getDate();
-		var year = currentTime.getFullYear();
-		
+		var year = currentTime.getFullYear();		
 		var em_name = document.getElementById('user_name').value;
 		var adx1 = "Routing to ADX for assistance. TT has been QC’ed by " + em_name + " on " + month + "/" + day + "/" + year;
 		var cfp1 = "Transferring to CFP.  TT has been QC’ed by " + em_name + " on " + month + "/" + day + "/" + year;
@@ -62,12 +60,7 @@ var printer_info = false;
 			document.getElementById('ra1').value = ra1;
 			document.getElementById('cbq').value = cbq;
 		}
-	}
-	$.fn.populate = function () {
-		
-		$(this).inlineerror("Test");
-		
-	}
+	}	
 	$.fn.poptastic = function (url) {
 		newwindow = window.open(url, 'name', 'height=600,width=800,resizable=no,scrollbars=yes,toolbar=no,status=no');
 		if (window.focus) {
@@ -106,8 +99,7 @@ var printer_info = false;
 		}
 		return b + s;
 	}
-	$.fn.toggleHigh = function () {
-		//alert(document.intro.prioritymatrix.options[document.intro.prioritymatrix.selectedIndex].value);
+	$.fn.toggleHigh = function () {		
 		var myselect = document.intro.prioritymatrix.options;
 		for (var i = 0; i < myselect.length; i++) {
 			if (myselect[i].selected == true) {
@@ -183,85 +175,13 @@ var printer_info = false;
 			}		
 		}
 	}
-	$.fn.resetValidation = function () {
-		
+	$.fn.resetValidation = function () {		
 		$('#prevtktdiv').removeClass("show", 1);
 		$('#hightxtpoc').removeClass("show", 1);
 		$('#migration').removeClass("show", 1);
 		$('#migration').addClass("hide", 1);
 		$('#prevtktdiv').addClass("hide", 1);
 		$('#hightxtpoc').addClass("hide", 1);
-	}
-	$.fn.inboxReset = function () {
-		//Reset What's Shown
-		document.inboxgen.inboxgeneratednotes.value = "";
-		$('#pocrolediv').addClass("hide", 1);
-		$('#primatrixdiv').addClass("hide", 1);
-		$('#dsediv').addClass("hide", 1);
-		$('#inboxgendiv').addClass("hide", 1);
-	}
-	$.fn.genInboxNotes = function () {
-		var template = document.inbox.inboxtemplates.options[document.inbox.inboxtemplates.selectedIndex].value;
-		var pocuser;
-		var pocrole = "not an IAO";
-		var priority = "LOW";
-		var pocsex;
-		var ticket;
-		
-		var dseraw = document.inbox.inboxdse.value;
-		var dsetrim = dseraw.replace(/^\s+/, '');
-		var dse = dsetrim.replace(/^\s+/, '');
-		var dsetext = $(this).splitDSEText(dseraw, 65);
-		var dsesplit = dsetext.split("\n");
-		var dseoutput = "";
-		
-		document.inboxgen.inboxgeneratednotes.value = "";
-		
-		for (i = 0; i < document.inbox.pocrolesel.length; i++) {
-			if (document.inbox.pocrolesel[i].checked == true) {
-				pocrole = document.inbox.pocrolesel[i].value;
-				if (pocrole != "TA") {
-					pocrole = "an " + document.inbox.pocrolesel[i].value;
-				} else {
-					pocrole = "a " + document.inbox.pocrolesel[i].value;
-				}
-			}
-		}
-		for (i = 0; i < document.inbox.inboxprioritymatrix.length; i++) {
-			if (document.inbox.inboxprioritymatrix[i].checked == true) {
-				priority = document.inbox.inboxprioritymatrix[i].value;
-			}
-		}
-		
-		if (template != "null") {
-			$('#inboxgendiv').removeClass("hide", 1500);
-		}
-		
-		if (template == "std_template") {
-			$('#pocrolediv').removeClass("hide", 1);
-			$('#primatrixdiv').removeClass("hide", 1);
-			$('#dsediv').removeClass("hide", 1);
-			
-			document.inboxgen.inboxgeneratednotes.value += "POC is " + pocrole + "\n";
-			document.inboxgen.inboxgeneratednotes.value += "Priority Matrix is " + priority + "\n";
-			
-			if (dse.length > 0) {
-				document.inboxgen.inboxgeneratednotes.value += "DSE Received? " + "YES" + "\n\n";
-				document.inboxgen.inboxgeneratednotes.value += "Received DSE from POC stating the following:" + "\n\n";
-				document.inboxgen.inboxgeneratednotes.value += "|<--------------BEGIN DSE---------------->|" + "\n";
-				
-				for (i = 0; i < dsesplit.length; i++) {
-					document.inboxgen.inboxgeneratednotes.value += "|	 " + dsesplit[i] + "\n";
-				}
-				
-				document.inboxgen.inboxgeneratednotes.value += "|<---------------END DSE----------------->|\n";
-			} else {
-				document.inboxgen.inboxgeneratednotes.value += "DSE Received? " + "NO" + "\n";
-			}
-		}
-		
-		var notes_complete = document.inboxgen.inboxgeneratednotes.value;
-		document.inboxgen.inboxgeneratednotes.value = $(this).splitText(notes_complete, 72);
 	}
 	$.fn.toggleCommon = function () {
 		var myselect = document.intro.calldrivers.options;
@@ -725,8 +645,7 @@ var printer_info = false;
 			document.getElementById('high-contrast-box').checked = false;
 			hcontrast = false;
 			var t = setTimeout("document.getElementById('high-contrast-box').disabled = false", 3100);
-			var r = setTimeout("document.getElementById('wide-screen-box').disabled = false", 3100);
-			//$(".backgrd").toggleClass('backgrd_black', 3000);
+			var r = setTimeout("document.getElementById('wide-screen-box').disabled = false", 3100);			
 			var msg = setTimeout("$(this).success('Beast Mode DISABLED')", 3100);
 		}
 	}
@@ -736,8 +655,7 @@ var printer_info = false;
 		if (enabled) {
 			$(".content").switchClass('content', 'content-wide', 1500);
 			$(".accordion").switchClass('accordion', 'accordion-wide', 1500);
-			document.getElementById('wide-screen-box').checked = true;
-			//document.getElementById('searchbox').size = 85;
+			document.getElementById('wide-screen-box').checked = true;			
 			wscreen = true;
 			var t = setTimeout("document.getElementById('wide-screen-box').disabled = false", 1600);
 			var r = setTimeout("document.getElementById('high-contrast-box').disabled = false", 1600);
@@ -745,16 +663,14 @@ var printer_info = false;
 		} else {
 			$(".content-wide").switchClass('content-wide', 'content', 1500);
 			$(".accordion-wide").switchClass('accordion-wide', 'accordion', 1500);
-			document.getElementById('wide-screen-box').checked = false;
-			//document.getElementById('searchbox').size = 39;
+			document.getElementById('wide-screen-box').checked = false;			
 			wscreen = false;
 			var t = setTimeout("document.getElementById('wide-screen-box').disabled = false", 1600);
 			var r = setTimeout("document.getElementById('high-contrast-box').disabled = false", 1600);
 			var msg = setTimeout("$(this).success('Wide Screen DISABLED')", 1600);
 		}
 	}
-	$.fn.inlineinfo = function (text) {
-		
+	$.fn.inlineinfo = function (text) {		
 		document.getElementById('info').innerHTML = '<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span><strong>Info: </strong>' + text + '</p>';
 		$('#info').show("blind", 1500);
 		setTimeout(function () {
@@ -848,13 +764,10 @@ var printer_info = false;
 			return;
 		} else if (searchtext != "") {
 			for (i = 0; i < aTags.length; i++) {
-				if (aTags[i] == searchtext) {
-					//alert(aTags[i]);
-					//alert(links[i]);
+				if (aTags[i] == searchtext) {					
 					var patt = /(#section-)[0-9]/g;
 					var result = patt.test(links[i]);
-					success = true;
-					//alert(result);
+					success = true;					
 					if (result) {
 						window.open(links[i], "_parent"); //Open in the same window if it's local
 					} else {

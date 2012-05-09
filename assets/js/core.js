@@ -769,28 +769,28 @@ var printer_info = false;
 		}
 	}
 	$.fn.info = function (notice_text) {
-		$.fn.noticeAdd({
+		$.noticeAdd({
 			text : notice_text,
 			stay : false,
 			type : 'notice'
 		});
 	}
 	$.fn.error = function (notice_text) {
-		$.fn.noticeAdd({
+		$.noticeAdd({
 			text : notice_text,
 			stay : false,
 			type : 'error'
 		});
 	}
 	$.fn.success = function (notice_text) {
-		$.fn.noticeAdd({
+		$.noticeAdd({
 			text : notice_text,
 			stay : false,
 			type : 'success'
 		});
 	}
 	$.fn.notice = function (notice_text) {
-		$.fn.noticeAdd({
+		$.noticeAdd({
 			text : notice_text,
 			stay : true,
 			type : 'info'

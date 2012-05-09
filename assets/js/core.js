@@ -28,7 +28,7 @@ var bb_info = false;
 var sharedrive_info = false;
 var printer_info = false;
 
-jQuery.fn.updateqs = function () {
+$.updateqs = function () {
 	
 	var currentTime = new Date();
 	var month = currentTime.getMonth() + 1;
@@ -62,18 +62,18 @@ jQuery.fn.updateqs = function () {
 		document.getElementById('cbq').value = cbq;
 	}
 }
-jQuery.fn.populate = function () {
+$.populate = function () {
 	
 	$(this).inlineerror("Test");
 	
 }
-jQuery.fn.poptastic = function (url) {
+$.poptastic = function (url) {
 	newwindow = window.open(url, 'name', 'height=600,width=800,resizable=no,scrollbars=yes,toolbar=no,status=no');
 	if (window.focus) {
 		newwindow.focus()
 	}
 }
-jQuery.fn.splitText = function (st, n) {
+$.splitText = function (st, n) {
 	var b = '';
 	var s = st;
 	while (s.length > n) {
@@ -89,7 +89,7 @@ jQuery.fn.splitText = function (st, n) {
 	}
 	return b + s;
 }
-jQuery.fn.splitDSEText = function (st, n) {
+$.splitDSEText = function (st, n) {
 	var b = '';
 	var s = st;
 	while (s.length > n) {
@@ -105,7 +105,7 @@ jQuery.fn.splitDSEText = function (st, n) {
 	}
 	return b + s;
 }
-jQuery.fn.toggleHigh = function () {
+$.toggleHigh = function () {
 	//alert(document.intro.prioritymatrix.options[document.intro.prioritymatrix.selectedIndex].value);
 	var myselect = document.intro.prioritymatrix.options;
 	for (var i = 0; i < myselect.length; i++) {
@@ -124,7 +124,7 @@ jQuery.fn.toggleHigh = function () {
 		$('#hightxtpoc').switchClass("show", "hide", 1);
 	}
 }
-jQuery.fn.togglePrevtkt = function () {
+$.togglePrevtkt = function () {
 	var neworexisting;
 	for (i = 0; i < document.intro.newexisting.length; i++) {
 		if (document.intro.newexisting[i].checked === true) {
@@ -137,7 +137,7 @@ jQuery.fn.togglePrevtkt = function () {
 		$('#prevtktdiv').switchClass("show", "hide", 1);
 	}
 }
-jQuery.fn.togglePOCisUser = function () {
+$.togglePOCisUser = function () {
 	if (document.intro.isuser.checked === false) {
 		$('#pocisuser').switchClass("hide", "show", 1);
 		document.intro.isaffecteduser.value = "";
@@ -146,7 +146,7 @@ jQuery.fn.togglePOCisUser = function () {
 		document.intro.isaffecteduser.value = document.intro.poccaller.value;
 	}
 }
-jQuery.fn.toggledsetxt = function () {
+$.toggledsetxt = function () {
 	if (document.intro.dsecheckbox.checked === true) {
 		$('#dse_field').switchClass("hide", "show", 1);
 	} else {
@@ -154,7 +154,7 @@ jQuery.fn.toggledsetxt = function () {
 		document.intro.dsecontents.value = "";
 	}
 }
-jQuery.fn.togglecontactinfo = function () {
+$.togglecontactinfo = function () {
 	if (document.intro.contactcheckbox.checked === true) {
 		$('#poccontactinfo').switchClass("hide", "show", 1);
 	} else {
@@ -162,7 +162,7 @@ jQuery.fn.togglecontactinfo = function () {
 		
 	}
 }
-jQuery.fn.toggleLevelII = function () {
+$.toggleLevelII = function () {
 	if (document.getElementById('l2-mode').checked === true) {
 		if (!l2mode) {
 			$('#basic1').hide('blind', 1000);
@@ -182,7 +182,7 @@ jQuery.fn.toggleLevelII = function () {
 		}		
 	}
 }
-jQuery.fn.resetValidation = function () {
+$.resetValidation = function () {
 	
 	$('#prevtktdiv').removeClass("show", 1);
 	$('#hightxtpoc').removeClass("show", 1);
@@ -191,7 +191,7 @@ jQuery.fn.resetValidation = function () {
 	$('#prevtktdiv').addClass("hide", 1);
 	$('#hightxtpoc').addClass("hide", 1);
 }
-jQuery.fn.inboxReset = function () {
+$.inboxReset = function () {
 	//Reset What's Shown
 	document.inboxgen.inboxgeneratednotes.value = "";
 	$('#pocrolediv').addClass("hide", 1);
@@ -199,7 +199,7 @@ jQuery.fn.inboxReset = function () {
 	$('#dsediv').addClass("hide", 1);
 	$('#inboxgendiv').addClass("hide", 1);
 }
-jQuery.fn.genInboxNotes = function () {
+$.genInboxNotes = function () {
 	var template = document.inbox.inboxtemplates.options[document.inbox.inboxtemplates.selectedIndex].value;
 	var pocuser;
 	var pocrole = "not an IAO";
@@ -262,7 +262,7 @@ jQuery.fn.genInboxNotes = function () {
 	var notes_complete = document.inboxgen.inboxgeneratednotes.value;
 	document.inboxgen.inboxgeneratednotes.value = $(this).splitText(notes_complete, 72);
 }
-jQuery.fn.toggleCommon = function () {
+$.toggleCommon = function () {
 	var myselect = document.intro.calldrivers.options;
 	var selected;
 	
@@ -314,7 +314,7 @@ jQuery.fn.toggleCommon = function () {
 		}
 	}
 }
-jQuery.fn.dynBase = function () {
+$.dynBase = function () {
 	var pbase = document.intro.baseloc.value;
 	
 	if (usafe_bases.test(pbase)) {
@@ -329,11 +329,11 @@ jQuery.fn.dynBase = function () {
 		$('#migrating_check').switchClass('show', 'hide', 1);
 	}
 }
-jQuery.fn.dynBaseReset = function () {
+$.dynBaseReset = function () {
 	$('#usafe_check').switchClass('show', 'hide', 1);
 	$('#migrating_check').switchClass('show', 'hide', 1);
 }
-jQuery.fn.dynReset = function () {
+$.dynReset = function () {
 	//Reset Fields
 	$('#network_info').addClass('hide', 1);
 	$('#email_info_exserver').addClass('hide', 1);
@@ -349,7 +349,7 @@ jQuery.fn.dynReset = function () {
 	sharedrive_info = false;
 	printer_info = false;
 }
-jQuery.fn.dynFields = function () {
+$.dynFields = function () {
 	var pdesc = document.intro.identification.value;
 	var psec = /(port|sec)/ig;
 	var email = /(mail|outlook|exchange)/ig;
@@ -402,7 +402,7 @@ jQuery.fn.dynFields = function () {
 		sharedrive_info = true;
 	}
 }
-jQuery.fn.genNotes = function () {
+$.genNotes = function () {
 	
 	document.intro.generatednotes.value = "";
 	
@@ -642,7 +642,7 @@ jQuery.fn.genNotes = function () {
 		document.intro.generatednotes.value = "Need more troubleshooting information.\nPlease fill out the troubleshooting section";
 	}
 }
-jQuery.fn.shiftRight = function () {
+$.shiftRight = function () {
 	if (shift) {
 		$("#bodyelm").removeClass('content-left', 1);
 		$("#bodyelm").addClass('content-right', 1);
@@ -651,7 +651,7 @@ jQuery.fn.shiftRight = function () {
 		shift = 1;
 	}
 }
-jQuery.fn.shiftLeft = function () {
+$.shiftLeft = function () {
 	if (shift) {
 		$("#bodyelm").removeClass('content-right', 1);
 		$("#bodyelm").addClass('content-left', 1);
@@ -660,7 +660,7 @@ jQuery.fn.shiftLeft = function () {
 		shift = 1;
 	}
 }
-jQuery.fn.shiftReset = function () {
+$.shiftReset = function () {
 	$("#bodyelm").removeClass('content-right', 1);
 	$("#bodyelm").removeClass('content-left', 1);
 	shift = 0;
@@ -675,7 +675,7 @@ jQuery('#probdesc').bind('change keyup', function () {
 		jQuery(this).unbind('change keyup');
 	}
 });
-jQuery.fn.gReset = function () {
+$.gReset = function () {
 	document.intro.generatednotes.style.height = '50px';
 	document.intro.dsecontents.style.height = '50px';
 	document.intro.troubleshooting.style.height = '75px';
@@ -684,7 +684,7 @@ jQuery.fn.gReset = function () {
 	document.intro.dsecontents.value = "";
 	var pocinfo = setTimeout("$('#poccontactinfo').switchClass('show', 'hide', 1);", 1000);
 }
-jQuery.fn.sot = function () {
+$.sot = function () {
 	if (!stayontop) {
 		stayontop = true;
 	} else {
@@ -700,7 +700,7 @@ jQuery.fn.sot = function () {
 		window.onblur = function () {}
 	}
 }
-jQuery.fn.high_contrast = function (enabled) {
+$.high_contrast = function (enabled) {
 	document.getElementById('high-contrast-box').disabled = true;
 	document.getElementById('wide-screen-box').disabled = true;
 	if (enabled) {
@@ -739,7 +739,7 @@ jQuery.fn.high_contrast = function (enabled) {
 		var msg = setTimeout("$(this).success('Beast Mode DISABLED')", 3100);
 	}
 }
-jQuery.fn.wide_screen = function (enabled) {
+$.wide_screen = function (enabled) {
 	document.getElementById('high-contrast-box').disabled = true;
 	document.getElementById('wide-screen-box').disabled = true;
 	if (enabled) {
@@ -762,7 +762,7 @@ jQuery.fn.wide_screen = function (enabled) {
 		var msg = setTimeout("$(this).success('Wide Screen DISABLED')", 1600);
 	}
 }
-jQuery.fn.inlineinfo = function (text) {
+$.inlineinfo = function (text) {
 	
 	document.getElementById('info').innerHTML = '<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span><strong>Info: </strong>' + text + '</p>';
 	$('#info').show("blind", 1500);
@@ -770,42 +770,42 @@ jQuery.fn.inlineinfo = function (text) {
 		$('#info').hide("blind", 1500);
 	}, 9000);
 }
-jQuery.fn.inlineerror = function (text) {
+$.inlineerror = function (text) {
 	document.getElementById('error').innerHTML = '<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><strong>Error! </strong>' + text + '</p>';
 	errstatus = 1;
 	if (errstatus == 0) {
 		$('#error').show("blind", 1500);
 	}
 }
-jQuery.fn.info = function (notice_text) {
+$.info = function (notice_text) {
 	$.noticeAdd({
 		text : notice_text,
 		stay : false,
 		type : 'notice'
 	});
 }
-jQuery.fn.error = function (notice_text) {
+$.error = function (notice_text) {
 	$.noticeAdd({
 		text : notice_text,
 		stay : false,
 		type : 'error'
 	});
 }
-jQuery.fn.success = function (notice_text) {
+$.success = function (notice_text) {
 	$.noticeAdd({
 		text : notice_text,
 		stay : false,
 		type : 'success'
 	});
 }
-jQuery.fn.notice = function (notice_text) {
+$.notice = function (notice_text) {
 	$.noticeAdd({
 		text : notice_text,
 		stay : true,
 		type : 'info'
 	});
 }
-jQuery.fn.opencop = function () {
+$.opencop = function () {
 	var links = new Array();
 	var aTags = new Array();
 	for (i = 0; i < document.links.length; i++) {

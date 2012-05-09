@@ -38,17 +38,20 @@ baselist = ["Ahmed Al Jaber AB KW", "Al Dhafra AB UAE", "Al Musnana AB OM", "Al 
 		var day = currentTime.getDate();
 		var year = currentTime.getFullYear();		
 		var em_name = document.getElementById('user_name').value;
-		var adx1 = "Routing to ADX for assistance. TT has been QC’ed by " + em_name + " on " + month + "/" + day + "/" + year;
-		var cfp1 = "Transferring to CFP.  TT has been QC’ed by " + em_name + " on " + month + "/" + day + "/" + year;
-		var cfp2 = "Transferring to CFP for validation.  TT has been QC’ed by " + em_name + " on " + month + "/" + day + "/" + year;
-		var cfp3 = "Transferring to CFP for touch maintenance.  TT has been QC’ed by " + em_name + " on " + month + "/" + day + "/" + year;
+		
+		var qc_msg = " Incident has been Quality Checked by " + em_name + " on " + month + "/" + day + "/" + year;
+		
+		var adx1 = "Routing to ADX for assistance." + qc_msg ;
+		var cfp1 = "Transferring to CFP." + qc_msg;
+		var cfp2 = "Transferring to CFP for validation." + qc_msg;
+		var cfp3 = "Transferring to CFP for touch maintenance." + qc_msg;
 		var l21 = "Assigning Level 2 TT to PB for validation and completion.";
-		var inosc1 = "Transferring to INE-Event Manager (83 NOS).  TT has been QC’ed by " + em_name + " on " + month + "/" + day + "/" + year;
-		var inosc2 = "Transferring to INW-Event Manager (561 NOS).  TT has been QC’ed by " + em_name + " on " + month + "/" + day + "/" + year;
-		var afds1 = "Routing to AFDS for assistance.  TT has been QC’ed by " + em_name + " on " + month + "/" + day + "/" + year;
-		var ra1 = "Assigning to RA Team for assistance.";
-		var cbq = "Routing to CallBack Queue for more information or follow-up.  TT has been QC’ed by " + em_name + " on " + month + "/" + day + "/" + year;
-		var ra1 = "Assigning to RA Team for assistance.";
+		var inosc1 = "Transferring to INE-Event Manager (83 NOS)." + qc_msg;
+		var inosc2 = "Transferring to INW-Event Manager (561 NOS)." + qc_msg;
+		var afds1 = "Routing to AFDS for assistance." + qc_msg;
+		var ra1 = "Assigning to RA Team for assistance." + qc_msg;
+		var cbq = "Routing to CallBack Queue for more information or follow-up." + qc_msg;
+		var ra1 = "Assigning to RA Team for assistance." + qc_msg;
 		
 		if (em_name != "") {
 			$('#quickshot').switchClass("hide", "show", 1);

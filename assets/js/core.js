@@ -403,12 +403,11 @@ baselist = ["Ahmed Al Jaber AB KW", "Al Dhafra AB UAE", "Al Musnana AB OM", "Al 
 				document.intro.generatednotes.value += "Affected BASE: " + document.intro.baseloc.value + "\n";
 			}
 			
-		}
-		
-<<<<<<< HEAD
+		}		
+
 		if (document.intro.probdesc.value != "") {
 			document.intro.generatednotes.value += "Issue: " + document.intro.probdesc.value + "\n";
-=======
+
 		if (sharedrive_info) {
 			document.intro.generatednotes.value += "Share Drive Path: " + document.intro.share_path.value + "\n";
 		}
@@ -418,7 +417,6 @@ baselist = ["Ahmed Al Jaber AB KW", "Al Dhafra AB UAE", "Al Musnana AB OM", "Al 
 		}
 		if (port_security_info) {
 			document.intro.generatednotes.value += "MAC Address: " + document.intro.network_mac.value + "\n";
->>>>>>> 884e2ec... fixed share drive path not showing
 		}
 		
 		if (dse.length > 0) {

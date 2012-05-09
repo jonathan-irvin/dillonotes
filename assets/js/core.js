@@ -695,7 +695,7 @@ var printer_info = false;
 		document.getElementById('high-contrast-box').disabled = true;
 		document.getElementById('wide-screen-box').disabled = true;
 		if (enabled) {
-			document.getElementById('page-style').href = 'assets/css/trontastic/jquery-ui-1.8.13.custom.css';		
+			document.getElementById('page-style').href = 'assets/css/trontastic/jquery-ui-1.8.20.custom.css';		
 			$(".backgrd").switchClass('backgrd', 'backgrd_black', 3000);
 			$(".notes").switchClass('notes', 'notes-hc', 3000);
 			$(".std-input-notes").switchClass('std-input-notes', 'hc-input-notes', 3000);
@@ -711,7 +711,7 @@ var printer_info = false;
 			var wse = setTimeout("document.getElementById('wide-screen-box').disabled = false", 3100);		
 			var msg = setTimeout("$(this).success('Beast Mode ENABLED')", 3100);
 		} else {
-			document.getElementById('page-style').href = 'assets/css/redmond/jquery-ui-1.8.13.custom.css';		
+			document.getElementById('page-style').href = 'assets/css/redmond/jquery-ui-1.8.20.custom.css';		
 			$(".hc-input-notes").switchClass('hc-input-notes', 'std-input-notes', 3000);
 			$(".notes-hc").switchClass('notes-hc', 'notes', 3000);
 			$(".hc-input").switchClass('hc-input', 'std-input', 3000);

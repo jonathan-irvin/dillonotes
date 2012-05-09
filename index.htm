@@ -10,6 +10,7 @@
 /_____/_/_/_/\____/_/ |_/\____/\__/\___/____/  
 
 -->
+<!--
 <script language="JavaScript">
 PLT_DisplayFormat = "Your connection took %%S%% seconds to load this page.";
 PLT_BackColor = "palegreen";
@@ -18,8 +19,8 @@ PLT_FontPix = "8";
 PLT_DisplayElementID = "display_here";
 </script>
 <script language="JavaScript" src="assets/js/PageLoadTime.js"></script>
-
-<title> ESD DilloNotes Beta</title>
+-->
+<title> ESD DilloNotes v2.6 Beta</title>
 <!-- Style Dependencies -->
 	<link type="text/css" href="assets/css/core/core.css" rel="stylesheet"/>
 	<link type="text/css" href="assets/css/core/jquery.notice.css" rel="stylesheet"/>
@@ -27,7 +28,7 @@ PLT_DisplayElementID = "display_here";
 	<link type="text/css" href="assets/js/tipsy/src/stylesheets/tipsy.css" rel="stylesheet"/>
 <!-- End Style Dependencies -->
 <!-- JavaScript Source Dependencies -->
-    <script type="text/javascript" src="assets/js/firebug-lite/build/firebug-lite.js"> </script>
+	<!--<script type="text/javascript" src="assets/js/firebug-lite/build/firebug-lite.js"> </script>-->
 	<script type="text/javascript" src="assets/js/jquery-1.7.2.js"> </script>
 	<script type="text/javascript" src="assets/js/jqui-1.8.20.js"> </script>
 	<script type="text/javascript" src="assets/js/jq.notice.js"> </script>
@@ -42,15 +43,8 @@ PLT_DisplayElementID = "display_here";
 <!-- End JavaScript Source Dependencies -->
 </head>
 <body class="c5 content" id="bodyelm" onLoad="UpdateClocks();password();setInterval(function () {$(this).dynFields()},1000);">
-<div id="error" class="ui-state-error ui-corner-all hide" style="position:fixed;float:center;top:0px;width:400px;height:50px;z-index:2000">
-</div>
-<div id="search-cop-dialog" title="Search the CoP" style="display:none">
-	<p>
-		Results not found. Care to search the CoP instead?
-	</p>
-</div>
-</div>
-<span id="copheader" class="page-header hide">DilloNotes Beta</span>
+<div id="error" class="ui-state-error ui-corner-all hide" style="position:fixed;float:center;top:0px;width:400px;height:50px;z-index:2000"></div>
+<span id="copheader" class="page-header hide">DilloNotes v2.6 Beta</span>
 <div class="accordion">
 <h3><a href="#">TimeZone Quick Reference (Click to Toggle)</a></h3>
 <div id="tzqr">
@@ -701,17 +695,9 @@ PLT_DisplayElementID = "display_here";
 	</div>
 </div>
 <div id="copfooter" class="c4 page-copy hide">
-	<br/> &copy; 2010-2012 <a href="mailto:jonathan.irvin.ctr@us.af.mil">Jonathan Irvin</a><br/>
-	<script type="text/javascript">
-		document.write(gVersion);										 
-	</script>
-	<br/> Valid XHTML 1.0 Transitional<br/><br/>
-	<script language="Javascript">document.write("<strong>This page was last modified on: " + snapts +"</strong>");</script>
-	<br>
-	<script language="Javascript">document.write(sDate(Date(0)));</script>
-	<br><br>
-	<span id="display_here"></span>
+	<br/> &copy; 2010-2012 <a href="mailto:jonathan.irvin.ctr@us.af.mil">Jonathan Irvin</a><br/>	
+	DilloNotes v2.6 Beta<br/>
+	Valid XHTML 1.0 Transitional		
 </div>
-<span id="plug" class="hidden-text"></span>
 </body>
 </html>

@@ -10,6 +10,7 @@
 /_____/_/_/_/\____/_/ |_/\____/\__/\___/____/  
 
 -->
+<!--
 <script language="JavaScript">
 PLT_DisplayFormat = "Your connection took %%S%% seconds to load this page.";
 PLT_BackColor = "palegreen";
@@ -18,67 +19,58 @@ PLT_FontPix = "8";
 PLT_DisplayElementID = "display_here";
 </script>
 <script language="JavaScript" src="assets/js/PageLoadTime.js"></script>
-
-<title> ESD DilloNotes Beta</title>
+-->
+<title> ESD DilloNotes v2.6 Beta</title>
 <!-- Style Dependencies -->
 	<link type="text/css" href="assets/css/core/core.css" rel="stylesheet"/>
 	<link type="text/css" href="assets/css/core/jquery.notice.css" rel="stylesheet"/>
-	<link type="text/css" href="assets/css/redmond/jquery-ui-1.8.13.custom.css" rel="stylesheet" id="page-style"/>
+	<link type="text/css" href="assets/css/redmond/jquery-ui-1.8.20.custom.css" rel="stylesheet" id="page-style"/>
 	<link type="text/css" href="assets/js/tipsy/src/stylesheets/tipsy.css" rel="stylesheet"/>
 <!-- End Style Dependencies -->
 <!-- JavaScript Source Dependencies -->
-	<script type="text/javascript" src="assets/js/jq-1.5.1.js"> </script>
-	<script type="text/javascript" src="assets/js/jqui-1.8.13.js"> </script>
-	<script type="text/javascript" src="assets/js/jq.notice.js"> </script>
-	<script type="text/javascript" src="assets/js/tipsy/src/javascripts/jquery.tipsy.js"> </script>
-	<script type="text/javascript" src="assets/js/jq.validation.js"> </script>
+	<!--<script type="text/javascript" src="assets/js/firebug-lite/build/firebug-lite.js"> </script>-->
+	<script type="text/javascript" src="assets/js/jq-1.7.2.js"> </script>
+	<script type="text/javascript" src="assets/js/jqui-1.8.20.js"> </script>
+	<script type="text/javascript" src="assets/js/jq.notice.js"> </script>	
 	<script type="text/javascript" src="assets/js/jq.textarea.exp.js"> </script>
 	<script type="text/javascript" src="assets/js/jqtxtfx.js"> </script>
 	<script type="text/javascript" src="assets/js/ctc.js"> </script>
 	<script type="text/javascript" src="assets/js/tz.js"> </script>
-	<script type="text/javascript" src="assets/js/passwd.js"> </script>
+	<script type="text/javascript" src="assets/js/passwd.js"> </script>	
 	<script type="text/javascript" src="assets/js/core.js"> </script>
 <!-- End JavaScript Source Dependencies -->
 </head>
 <body class="c5 content" id="bodyelm" onLoad="UpdateClocks();password();setInterval(function () {$(this).dynFields()},1000);">
-<div id="error" class="ui-state-error ui-corner-all hide" style="position:fixed;float:center;top:0px;width:400px;height:50px;z-index:2000">
-</div>
-<div id="search-cop-dialog" title="Search the CoP" style="display:none">
-	<p>
-		Results not found. Care to search the CoP instead?
-	</p>
-</div>
-</div>
-<span id="copheader" class="page-header hide">DilloNotes Beta</span>
+<span id="copheader" class="page-header hide">DilloNotes v2.6 Beta</span>
 <div class="accordion">
-<h3><a href="#">TimeZone Quick Reference (Click to Toggle)</a></h3>
-<div id="tzqr">
-	<table border="0" cellspacing="0" width="100%">
-		<tr bgcolor="black" style="font-family: Helvetica, Verdana, Tahoma, Arial; font-size: small">
-			<td ID="Clock4" width="20%" align="center">		</td>
-			<td ID="Clock0" width="20%" align="center">		</td>
-			<td ID="Clock1" width="20%" align="center">		</td>
-			<td ID="Clock2" width="20%" align="center">		</td>
-			<td ID="Clock3" width="20%" align="center">		</td>
-		</tr>
-		<tr bgcolor="black" style="font-family: Helvetica, Verdana, Tahoma, Arial; font-size: small">
-			<td ID="Clock6" width="20%" align="center">		</td>
-			<td ID="Clock8" width="20%" align="center">		</td>
-			<td ID="Clock9" width="20%" align="center">		</td>
-			<td ID="Clock5" width="20%" align="center">		</td>
-			<td ID="Clock7" width="20%" align="center">		</td>
-		</tr>
-	</table>
-</div>
+	<h3><a href="#">TimeZone Quick Reference (Click to Toggle)</a></h3>
+	<div id="tzqr">
+		<table border="0" cellspacing="0" width="100%">
+			<tr bgcolor="black" style="font-family: Helvetica, Verdana, Tahoma, Arial; font-size: small">
+				<td ID="Clock4" width="20%" align="center">		</td>
+				<td ID="Clock0" width="20%" align="center">		</td>
+				<td ID="Clock1" width="20%" align="center">		</td>
+				<td ID="Clock2" width="20%" align="center">		</td>
+				<td ID="Clock3" width="20%" align="center">		</td>
+			</tr>
+			<tr bgcolor="black" style="font-family: Helvetica, Verdana, Tahoma, Arial; font-size: small">
+				<td ID="Clock6" width="20%" align="center">		</td>
+				<td ID="Clock8" width="20%" align="center">		</td>
+				<td ID="Clock9" width="20%" align="center">		</td>
+				<td ID="Clock5" width="20%" align="center">		</td>
+				<td ID="Clock7" width="20%" align="center">		</td>
+			</tr>
+		</table>
+	</div>
 </div>
 <div id="shifts" align="center" class="hide">
-<table border="0" cellspacing="0" width="100%">
-		<tr>
-			<td><div class="shift"><a href="#" onclick="javascript:$(this).shiftLeft()">Shift Left</a></div></td>
-			<td><div class="shift"><a href="#" onclick="javascript:$(this).shiftReset()">Shift Center</a></div></td>
-			<td><div class="shift"><a href="#" onclick="javascript:$(this).shiftRight()">Shift Right</a></div></td>
-		</tr>
-</table>
+	<table border="0" cellspacing="0" width="100%">
+			<tr>
+				<td><div class="shift"><a href="#" onclick="javascript:$(this).shiftLeft()">Shift Left</a></div></td>
+				<td><div class="shift"><a href="#" onclick="javascript:$(this).shiftReset()">Shift Center</a></div></td>
+				<td><div class="shift"><a href="#" onclick="javascript:$(this).shiftRight()">Shift Right</a></div></td>
+			</tr>
+	</table>
 </div>
 <div id="errmsg">
 	<span class="global-err"><b>Loading...Please Wait</b></span>
@@ -96,90 +88,19 @@ PLT_DisplayElementID = "display_here";
 		<li><a href="#section-5" class="tooltip" tooltip="Get help here about DilloNotes as well as other tips and tricks">?</a></li>
 	</ul>
 	<div id="section-1">
-		<h3>DilloTools</h3>
+		<h3> Welcome </h3>
 		
 		<div style="font-weight: 700;size: 24px;text-align: center;">
 			<em>One Network to rule them all, One Network to find them,<br>
 			One Network to bring them all, and in the AFNet bind them.</em><br>
-		</div>		
+		</div>
 		<p>
-			Want to find your way back here?
-			<br>Use the link below (Uses Area52 Share Mappings):<br/>
-			<a href="\\52mpls-fs-109\67NWW\690NSG\690NSS\ESD-L_Home\Jonathan.Irvin\dillonotes\index.htm">\\52mpls-fs-109\67NWW\690NSG\690NSS\ESD-L_Home\Jonathan.Irvin\dillonotes\index.htm</a>
+			 This page is to be used as a <strong>REFERENCE ONLY</strong> and not to be relied upon more that the official CoP itself. DilloNotes is built by technicians for technicians.	If you have a suggestion, hit me up.	I may or may not incorporate all feedback I receive.
 		</p>
-		<p>Report any broken or outdated links!</p>		
+		<p>
+			Want to find your way back here? Use the link below (Uses Area52 Share Mappings):<br/><a href="\\52mpls-fs-109\67NWW\690NSG\690NSS\ESD-L_Home\Jonathan.Irvin\dillonotes\index.htm">\\52mpls-fs-109\67NWW\690NSG\690NSS\ESD-L_Home\Jonathan.Irvin\dillonotes\index.htm</a>
+		</p>		
 		<div class="accordion-notes">
-			<h3>
-			<a href="#">Tools</a>
-			</h3>
-			<div>
-				<!--
-				<b>Template</b>
-				<ul>
-					<li><a href="" target="_blank"></a></li>
-				</ul>
-				-->
-				<b>ADLS - Advanced Distributed Learning Service</b>
-				<ul>
-					<li><a href="https://golearn.csd.disa.mil/kc/login/login.asp" target="_blank">ADLS Login</a></li>
-					<li><a href="http://www.my.af.mil/imdsltpa/IMDSTWeb/ActionServlet" target="_blank">TBA - Training Business Area</a></li>
-				</ul>
-				<b>ADX - Active Directory Exchange</b>
-				<ul>
-					<li><a href="https://scott.migration.us.af.mil/" target="_blank">Air Force Migration Statistics</a></li>
-					<li><a href="\\52MPLS-FS-109\67nww\690NSG\690NSS\2010 ADX Migration Schedule\Migration Schedules & Totals\Revised Migration Schedule.xls" target="_blank">ADX Migration Schedule</a></li>
-				</ul>
-				<b>AF PKI - AF Public Key Infrastructure</b>
-				<ul>
-					<li><a href="https://ara-1.c3pki.chamb.disa.mil/ara/key" target="_blank">PKI Key Escrow Retrieval</a></li>
-					<li><a href="https://afpki.lackland.af.mil/assets/files/ci-09-07-001_automated_key_recovery_v1200.ppt" target="_blank">PKI Key Escrow Retrieval PowerPoint (PPT)</a></li>
-					<li><a href="https://www.dmdc.osd.mil/appj/ump/umphome.do" target="_blank">CAC User Maintenance Portal (UMP-PIP)</a></li>
-					<li><a href="https://afpki.lackland.af.mil/assets/files/TM-08-01-046_Use_an_Org_Grp_Cert_ORG_v3010.pdf" target="_blank">PKI Publish Certs for an Org Box</a></li>
-				</ul>
-				<b>AFDS - Air Force Directory Services</b>
-				<ul>
-					<li><a href="https://imp.afds.af.mil/default.aspx" target="_blank">AFDS - Identity Mainagement Portal</a></li>
-					<li><a href="https://imp.afds.af.mil/nonaf/" target="_blank">AFDS - Non-AF User Account Request</a></li>
-				</ul>
-				<b>BES - Blackberry Enterprise Server Support</b>
-				<ul>
-					<li><a href="https://scott.bes.us.af.mil/webconsole/app" target="_blank">AFNet BES</a></li>
-				</ul>
-				<b>BOMGAR</b>
-				<ul>
-					<li><a href="https://esdconnect.us.af.mil/" target="_blank">ESD Connect Portal</a></li>
-					<li><a href="https://esdconnect.us.af.mil/login" target="_blank">ESD BOMGAR Login</a></li>
-				</ul>
-				<b>DEERS-RAPIDS &amp; DMDC</b>
-				<ul>
-					<li><a href="https://jeds.gds.disa.mil/jeds/search.action" target="_blank">JEDS - Joint Enterprise Directory System</a></li>
-				</ul>
-				<b>DRA - Directory Resource Administrator</b>
-				<ul>
-					<li><a href="https://esd.dra.us.af.mil/dra" target="_blank">ESD DRA Server</a></li>
-				</ul>
-				<b>ESD Community of Practice (COP)</b>
-				<ul>
-					<li><a href="https://afkm.wpafb.af.mil/community/views/home.aspx?Filter=AE-SC-00-10" target="_blank">ESD Community of Practice (COP) Non-Portal</a></li>
-					<li><a href="https://esd.us.af.mil/sop/default.aspx?RootFolder=%2fsop%2fKnowledge%20Base%2fESD%20SOPS&FolderCTID=&View=%7b5D8A6B59%2dDF59%2d43E6%2dB94B%2dABF5F72F0D39%7d" target="_blank">ESD Community of Practice (COP) Portal</a></li>
-				</ul>
-				<b>ESD Portal</b>
-				<ul>
-					<li><a href="https://esd.us.af.mil/default.aspx" target="_blank">ESD Main Portal</a></li>
-				</ul>
-				<b>Remedy</b>
-				<ul>
-					<li><a href="https://eitsm.us.af.mil/" target="_blank">Remedy Logincd </a></li>
-				</ul>
-				<b>OWA - Outlook Web Access</b>
-				<ul>
-					<li><a href="https://www.my.af.mil/gcss-af/USAF/AFP40/d/s6925EC1356510FB5E044080020E329A9/Files/editorial/Air%20Force%20Webmail%20Addresses.pdf" target="_blank">All Outlook Webmail Links</a></li>
-				</ul>
-				<b>Supported Locations</b>
-				<ul>
-					<li><a href="https://afkm.wpafb.af.mil/Wiki/default.aspx?page=Supported+Locations&Filter=AE-SC-00-10" target="_blank">All ESD Supported Locations (ESD Wiki)</a></li>
-				</ul>				
-			</div>	
 			<h3>
 			<a href="#">AFNet Password Generator (Beta)</a>
 			</h3>
@@ -187,7 +108,7 @@ PLT_DisplayElementID = "display_here";
 				<input type="text" id="afnetpasswd" class="std-input-notes" title="Click me to Copy to Clipboard" onclick="javascript:ctc(this)" size='20' style="height:26px;font-weight:700;font-size:18px;font-family:courier new"><button id="refpass"></button>
 			</div>
 			<h3>
-			<a href="#">TimeSheets</a>
+			<a href="#">Quick Links</a>
 			</h3>
 			<div>
 				<ul>
@@ -203,10 +124,42 @@ PLT_DisplayElementID = "display_here";
 					<li>
 					<a href="https://nsoctime.rothe.com" target="_blank">NSOC Time (Rothe Timesheet)</a>
 					</li>
-					<li><b>If your company isn't listed, let me know.  I'll be happy to add it.</b></li>
 				</ul>
 			</div>
-			
+			<h3>
+			<a href="#">Tools</a>
+			</h3>
+			<div>
+				<ul>
+					<li>
+					<a href="https://afkm.wpafb.af.mil/asps/docman/docmain.asp?tab='0&amp;FolderID=AE-SC-00-10-11-19&amp;Filter=AE-SC-00-10'" target="_blank">Official ESD SOPs</a>
+					</li>
+					<li>
+					<a href="https://golearn.csd.disa.mil/kc/login/login.asp"> Advanced Distributed Learning Services (ADLS)</a>
+					</li>
+					<li>
+					<a href="https://esd.dra.us.af.mil/dra/" target="_blank">*WEB DRA* AFNet DRA (Web)</a>
+					</li>
+					<li>
+					<a href="https://wwwmil.usafe.af.mil/remedy/shared/login.jsp" target="_blank">*WEB REMEDY* USAFE Remedy (Web)</a>
+					</li>
+					<li>
+					<a href="//52mpls-fs-109/67nww/690nsg/690nss/esd-l_home" target="_blank">ESD Share Drive</a>
+					</li>
+					<li>
+					<a href="//52mpls-fs-109/67nww/690nsg/690nss/esd/lackland-ramstein%20esd%20cop%20backup" target="_blank">Lackland-Ramstein ESD CoP Backup</a>
+					</li>
+					<li>
+					<a href="https://dod411.chamb.disa.mil/" target="_blank">GDS Query Screen</a>
+					</li>
+					<li>
+					<a href="https://ara-1.c3pki.chamb.disa.mil/ara/key " target="_blank">PKI Key Escrow Retrieval</a>
+					</li>
+					<li>
+					<a href="https://afpki.lackland.af.mil/assets/files/ci-09-07-001_automated_key_recovery_v1200.ppt" target="_blank">PKI Key Escrow Retrieval PowerPoint (PPT)</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<div id="section-2">
@@ -288,29 +241,9 @@ PLT_DisplayElementID = "display_here";
 					<div id="hightxtpoc" class="hide">
 						<label class="notes" for="highpoc">High Ticket 24-Hr. POC:</label>
 						<input type="text" name="highpoc" id="hpoc" class="notes-tooltip-we-reqs std-input-notes" tooltip="Required for HIGH tickets! Include name and DSN" size='30'>
-					</div>
-					<!--
-						<label class="notes hide" for="isiao3">POC is CSA/CST?:</label>
-						<input type="checkbox" name="isiao3" value="CSA" class="notes-tooltip-ns std-input-notes radio hide" tooltip="POC is a CSA">CSA <br>
-						<label class="notes hide" for="isiao4">POC is CFP?:</label>
-						<input type="checkbox" name="isiao4" value="CFP" class="notes-tooltip-ns std-input-notes radio hide" tooltip="POC is with Comm Focal Point">CFP
-					-->
+					</div>					
 					<div id="basic2" class="show">
-					<h3>Gather Info</h3>						
-						<!--<label class="notes" for="calldrivers">Common Issues*:</label>-->
-						
-						<select name="calldrivers" class="notes-tooltip-we std-input-notes hide" tooltip="Here's a list of common issues. Does the issue match one in the list?" style="font-size:14px;border 0px" onfocus="javascript:$(this).toggleCommon();" onblur="javascript:$(this).toggleCommon();" onclick="javascript:$(this).toggleCommon();">
-							<option value="" selected="selected">---</option>
-							<option value="migration">Migration Issues</option>
-							<option value="printer">Printer Issues</option>
-							<option value="workstation">Workstation Issues</option>
-						</select>
-						
-					<!--
-						<label class="notes" for="numaffected">Total Impacted:</label>
-						<input type="text" name="numaffected" id="numafft" class="notes-tooltip-we-reqs std-input-notes" value=1 tooltip="How many users or workstations are affected, if any?">					
-						<br>
-					-->
+					<h3>Gather Info</h3>
 						<fieldset>
 						<legend>The Basics</legend>
 							<label class="notes" class="notes" for="edipi">EDI PI#:</label>
@@ -450,23 +383,6 @@ PLT_DisplayElementID = "display_here";
 						<label class="notes" for="dsecontents">Paste DSE Here --->:</label>
 						<textarea cols="55" rows="10" id="dsecont" name="dsecontents" class="expand50-300 std-input-notes"></textarea>
 					</div>
-					<!-- Per Ops, DW, Removed from DilloNotes 3/12/2012 -->
-					<!--<br/><br/>-->
-					<!--<h3>Route or Resolve</h3>-->
-					<!--<label class="notes" for="resolution">Final Statement:</label>-->
-					<select name="resolution" class="notes-tooltip-we std-input-notes hide" tooltip="Select a closing/forwarding statement" style="font-size:14px;border 0px" onclick="javascript:$(this).genNotes();">
-						<option value="Routing to EMs" selected="selected">Recommend a closing action...</option>
-						<option value="Setting to Resolved">Issue is Resolved</option>
-						<option value="Setting to Closed; Provided information to Caller">Informational/Inquiry</option>
-						<option value="Routing to ESD Acct Mgt">Route to AM Queue</option>
-						<option value="Routing to Callback Queue">Route to Callback</option>
-						<option value="Routing to ADX Migration">Route to ADX</option>
-						<option value="Routing to EMs">Route to EMs</option>
-						<option value="Routing to Remote Admin">Route to RA</option>
-
-					</select>
-					<textarea cols="48" rows="3" name="resolution-cust" id="resarea-cust" class="notes-tooltip-we-reqs expand75-100 std-input-notes hide" tooltip="Did ya fix it? Sweet! What was the end result of your troubleshooting? Didn't fix it? No worries, put a brief set of instructions that need to be done e.g. 'Route to EMs' or 'Assigned to Level 2 AM'"></textarea>
-					<br/><br/>
 					<h3>Copy into Remedy</h3>
 					<div id="basic4"></div>
 					<fieldset>
@@ -582,7 +498,6 @@ PLT_DisplayElementID = "display_here";
 					<li>Increased the font size of the timezone area for better readability</li>
 				</ul>
 			</div>
-
 			<h3>
 			<a href="#">v2.4 (18Feb2012)</a>
 			</h3>
@@ -739,17 +654,9 @@ PLT_DisplayElementID = "display_here";
 	</div>
 </div>
 <div id="copfooter" class="c4 page-copy hide">
-	<br/> &copy; 2010-2012 <a href="mailto:jonathan.irvin.ctr@us.af.mil">Jonathan Irvin</a><br/>
-	<script type="text/javascript">
-		document.write(gVersion);										 
-	</script>
-	<br/> Valid XHTML 1.0 Transitional<br/><br/>
-	<script language="Javascript">document.write("<strong>This page was last modified on: " + snapts +"</strong>");</script>
-	<br>
-	<script language="Javascript">document.write(sDate(Date(0)));</script>
-	<br><br>
-	<span id="display_here"></span>
+	<br/> &copy; 2010-2012 <a href="mailto:jonathan.irvin.ctr@us.af.mil">Jonathan Irvin</a><br/>	
+	DilloNotes v2.6 Beta<br/>
+	Valid XHTML 1.0 Transitional		
 </div>
-<span id="plug" class="hidden-text"></span>
 </body>
 </html>

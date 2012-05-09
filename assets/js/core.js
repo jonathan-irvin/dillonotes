@@ -355,8 +355,7 @@ baselist = ["Ahmed Al Jaber AB KW", "Al Dhafra AB UAE", "Al Musnana AB OM", "Al 
 		var dsesplit = dsetext.split("\n");
 		var dseoutput = "";
 		
-		var tstext = document.intro.troubleshooting.value.split("\n");
-		var restext = document.intro.resolution.value.split("\n");
+		var tstext = document.intro.troubleshooting.value.split("\n");		
 		
 		if (document.intro.isiao1[0].checked) {
 			iao = "IAO";
@@ -470,91 +469,7 @@ baselist = ["Ahmed Al Jaber AB KW", "Al Dhafra AB UAE", "Al Musnana AB OM", "Al 
 					document.intro.generatednotes.value += "Therefore, isn't fully migrated\n";
 				}
 			}
-		}
-		
-		/* COMMON CALL DRIVERS TROUBLESHOOTING */
-		
-		var calldrivers = document.intro.calldrivers.options;
-		var selected;
-		var migration = false;
-		var dmdc = false;
-		for (var i = 0; i < calldrivers.length; i++) {
-			if (calldrivers[i].selected == true) {
-				selected = document.intro.calldrivers.options[i].value;
-				
-				document.intro.generatednotes.value += "\n";
-				if (i > 0) {
-					document.intro.generatednotes.value += "Info\n--------------- \n";
-				} else {
-					document.intro.generatednotes.value += "Troubleshooting\n--------------- \n";
-				}
-				
-				if (i == 1) {
-					document.intro.generatednotes.value += "---Migration Issue Notes---\n";
-					if (document.intro.ismigrated.checked) {
-						document.intro.generatednotes.value += "Account is migrated as 'migration.qmm' is present.\n";
-					} else {
-						document.intro.generatednotes.value += "Account is NOT migrated as 'migration.qmm' is NOT present.\n";
-					}
-					if (document.intro.isexchangeupdated.checked) {
-						document.intro.generatednotes.value += "Exchange server setting & domain matches Outlook and DRA\n";
-					} else {
-						document.intro.generatednotes.value += "Exchange server setting & domain doesn't match Outlook and DRA\n";
-					}
-					if (document.intro.isworkstationmigrated.checked) {
-						document.intro.generatednotes.value += "Workstation resides within AREA52 domain\n";
-					} else {
-						document.intro.generatednotes.value += "Workstation resides in a NON-AREA52 domain\n";
-						document.intro.generatednotes.value += "Therefore, isn't fully migrated\n";
-					}
-					if (!document.intro.isworkstationmigrated.checked) {
-						document.intro.generatednotes.value += "Workstation Domain: " + document.intro.workstationdomain.value + "\n";
-					}
-				} else if (i == 2) {
-					document.intro.generatednotes.value += "[Printer Issue Notes]\n";
-					document.intro.generatednotes.value += "Printer Make/Model: " + document.intro.device_model.value + "\n";
-					document.intro.generatednotes.value += "Printer IP: " + document.intro.network_ip.value + "\n";
-				} else if (i == 3) {
-					document.intro.generatednotes.value += "[Workstation Issue Notes]\n";
-					document.intro.generatednotes.value += "Workstation Name: " + document.intro.workstation.value.toUpperCase() + "\n";
-					document.intro.generatednotes.value += "Workstation Make/Model: " + document.intro.device_model.value + "\n";
-					document.intro.generatednotes.value += "Workstation IP (if needed): " + document.intro.network_ip.value + "\n";
-				} else if (i == 1000) {
-					document.intro.generatednotes.value += "[DMDC Issue Notes]\n";
-					document.intro.generatednotes.value += "Work Schedule: " + document.intro.dmdc_work_schedule.value + "\n";
-					document.intro.generatednotes.value += "DoD Component: " + document.intro.dmdc_dod_component.value + "\n";
-					document.intro.generatednotes.value += "DoD CAC Role: " + document.intro.dmdc_cac_role.value + "\n";
-					document.intro.generatednotes.value += "Actively Working Role: " + document.intro.dmdc_role_working.value + "\n";
-				} else {
-					for (i = 0; i < tstext.length; i++) {
-						document.intro.generatednotes.value += tstext[i] + "\n";
-					}
-					document.intro.generatednotes.value += "--------------- \n";
-					break;
-				}
-				
-				if (i > 0) {
-					/* Additional Troubleshooting */
-					
-					if (tstext.length > 0) {
-						
-						document.intro.generatednotes.value += "\n";
-						document.intro.generatednotes.value += "Troubleshooting\n--------------- \n";
-						
-						for (i = 0; i < tstext.length; i++) {
-							document.intro.generatednotes.value += tstext[i] + "\n";
-						}
-						
-						document.intro.generatednotes.value += "--------------- \n";
-						
-					} else {
-						document.intro.generatednotes.value = "Need more troubleshooting information";
-					}
-				}
-				
-				break;
-			}
-		}
+		}	
 		
 		document.intro.generatednotes.value += "\n";
 

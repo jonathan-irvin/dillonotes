@@ -83,7 +83,7 @@ PLT_DisplayElementID = "display_here";
 		<li><a href="#section-3" class="tooltip" tooltip="EM Quickshot Messages">EM</a></li>
 		<li><a href="#section-4" class="tooltip" tooltip="Recent changes to DillONotes">Changes</a></li>
 		<li><a href="#section-6" class="tooltip" tooltip="Options">Options</a></li>
-		<li><a href="#section-5" class="tooltip" tooltip="Get help here about DilloNotes as well as other tips and tricks">?</a></li>
+		<li><a href="#section-5" class="tooltip" tooltip="Get help here about DilloNotes as well as other tips and tricks">Help</a></li>
 	</ul>
 	<div id="section-1">
 		<h3>DilloTools</h3>
@@ -523,85 +523,87 @@ PLT_DisplayElementID = "display_here";
 	<div id="section-4">
 		<div class="accordion-notes">
 			<h3>
-			<a href="#">v2.6 (1Apr2012)</a>
+			<a href="#">v2.7 (9May2012)</a>
 			</h3>
 			<div>
 				<ul>
-					<li><strong>MAJOR</strong> Dynamic Field Generation - As you type why the user is calling, certain fields will pop up pointing you in the proper info to ask.</li>
-					<li>Moved items around to condense DilloNotes
-						<ul>
-							<li>Moved state changes to Options Tab</li>
-							<li>Renamed Help to "?"</li>
-							<li>Revamped the CLASSIFIED message.</li>
-						</ul>
-					</li>
-					<li>Added USAFE Base detection, adds a notice at the top of the notes</li>
-					<li>Added Migrating Base detection, adds a notice at the top of the notes</li>
-					<li>Increased the font size of the timezone area for better readability</li>
+					<li>Synced some changes between beta and stable</li>
+					<li>Removed unneeded code</li>
+					<li>Fixed share drive path not showing on DFG when generating notes</li>
+					<li>Expanded 'exch' to 'exchange' for DFG</li>
+					<li>Added several useful links under "Tools" as well as rearranged it some</li>
+					<li>Updated jQuery and jQuery UI libraries to latest stable versions 1.7.2 and 1.8.20 respectively</li>
+					<li>Several formatting changes</li>
+					<li>Modified EM Quickshot messages</li>
+					<li>Removed validation line, not needed</li>
+					<li>Changed several labels to match callscript further</li>
 				</ul>
-			</div>
-			<h3>
-			<a href="#">v2.4 (18Feb2012)</a>
-			</h3>
-			<div>
-				<ul>
-					<li>Divided DilloNotes into Sections to organize it further.</li>
-					<li>Updated the Welcome/ESD Tools Page</li>
-					<li>Added buttons instead of radio buttons for easy clicking</li>
-					<li>Added a Time Zone Quick Reference</li>
-					<li>Added an AFNet-worthy password generator. It's Beta, but should produce valid passwords. 4 lowercase, 4 UPPERCASE, 4 numbers, and 4 special characters.</li>
-					<li>Added Japan &amp; Afganistan Tz.	Changed PACAF to Hawaii Standard Time (HST).	Added a 5th column.</li>
-					<li>Added RA Queue and Informational Closing actions</li>
-					<li>Changed the folder structure</li>
-					<li>Restricted access</li>
-					<li>Added protips</li>
-					<li>Corrected timezones</li>
-					<li>Per Ops, DW, removed closing statement from DilloNotes - 3/12/2012</li>
-					<li>Added right, left, and center shifts</li>
-				</ul>
-			</div>
-			<h3>
-			<a href="#">v2.3 (29Jan2012)</a>
-			</h3>
-			<div>
-				<ul>
-					<li>Added a "Condensed Mode" specifically for working tickets and/or simple, quickshot tickets like account maintenance requests.</li>
-					<li>Put DilloNotes on a diet so it can fit in tighter places.</li>
-					<li>Modified some of the validation checks in order to make that happen</li>
-					<li>Added a help section, more info to be put here.</li>
-					<li>Changed "Troubleshooting" section to read "Troubleshooting/Action Taken" for less confused technicians.</li>
-					<li>Fixed a bug causing the workstation field to be hidden on reset.</li>
-					<li>Due to popular demand, hatemail, hate-metrics, and other nonsensical shenanigans...I've added the EDI PI field back.</li>
-					<li>Fixed a bug causing DSE field to not reset on reset. It has had a stern talking to.</li>
-					<li>Removed field validation</li>
-					<li>Removed toast pop-ups. Will re-approach this later.</li>
-					<li>Made DilloNotes prettier.</li>
-					<li>DilloNotes is no longer Tipsy.</li>
-					<li>Put DilloNotes through more diet and exercise.</li>
-					<li>Made Remedy Action Summary Questions more apparent.	 Copy the questions into the notes for next-level troubleshooting action.</li>
-				</ul>
-			</div>
-			<h3>
-			<a href="#">v2.2 (28Jan2012)</a>
-			</h3>
-			<div>
-				<ul>
-					<li>Added a changelog</li>
-					<li>Removed EDI field, please put that info in the Troubleshooting section.</li>
-					<li>Separated DSN/Comm field into two individual fields</li>
-					<li>The troubleshooting field was vertically challenged. This has been fixed.
+			
+				<b>v2.6 (1Apr2012)</b><br>						
 					<ul>
-						<li><b>Side Note:</b> The troubleshooting field is specifically designed for troubleshooting notes. <br>
-						Next level troubleshooting...smart!</li>
+						<li><strong>MAJOR</strong> Dynamic Field Generation - As you type why the user is calling, certain fields will pop up pointing you in the proper info to ask.</li>
+						<li>Moved items around to condense DilloNotes
+							<ul>
+								<li>Moved state changes to Options Tab</li>
+								<li>Renamed Help to "?"</li>
+								<li>Revamped the CLASSIFIED message.</li>
+							</ul>
+						</li>
+						<li>Added USAFE Base detection, adds a notice at the top of the notes</li>
+						<li>Added Migrating Base detection, adds a notice at the top of the notes</li>
+						<li>Increased the font size of the timezone area for better readability</li>
+					</ul>			
+				<b>v2.4 (18Feb2012)</b><br>			
+					<ul>
+						<li>Divided DilloNotes into Sections to organize it further.</li>
+						<li>Updated the Welcome/ESD Tools Page</li>
+						<li>Added buttons instead of radio buttons for easy clicking</li>
+						<li>Added a Time Zone Quick Reference</li>
+						<li>Added an AFNet-worthy password generator. It's Beta, but should produce valid passwords. 4 lowercase, 4 UPPERCASE, 4 numbers, and 4 special characters.</li>
+						<li>Added Japan &amp; Afganistan Tz.	Changed PACAF to Hawaii Standard Time (HST).	Added a 5th column.</li>
+						<li>Added RA Queue and Informational Closing actions</li>
+						<li>Changed the folder structure</li>
+						<li>Restricted access</li>
+						<li>Added protips</li>
+						<li>Corrected timezones</li>
+						<li>Per Ops, DW, removed closing statement from DilloNotes - 3/12/2012</li>
+						<li>Added right, left, and center shifts</li>
+					</ul>			
+				<b>v2.3 (29Jan2012)</b><br>			
+					<ul>
+						<li>Added a "Condensed Mode" specifically for working tickets and/or simple, quickshot tickets like account maintenance requests.</li>
+						<li>Put DilloNotes on a diet so it can fit in tighter places.</li>
+						<li>Modified some of the validation checks in order to make that happen</li>
+						<li>Added a help section, more info to be put here.</li>
+						<li>Changed "Troubleshooting" section to read "Troubleshooting/Action Taken" for less confused technicians.</li>
+						<li>Fixed a bug causing the workstation field to be hidden on reset.</li>
+						<li>Due to popular demand, hatemail, hate-metrics, and other nonsensical shenanigans...I've added the EDI PI field back.</li>
+						<li>Fixed a bug causing DSE field to not reset on reset. It has had a stern talking to.</li>
+						<li>Removed field validation</li>
+						<li>Removed toast pop-ups. Will re-approach this later.</li>
+						<li>Made DilloNotes prettier.</li>
+						<li>DilloNotes is no longer Tipsy.</li>
+						<li>Put DilloNotes through more diet and exercise.</li>
+						<li>Made Remedy Action Summary Questions more apparent.	 Copy the questions into the notes for next-level troubleshooting action.</li>
+					</ul>			
+				<b>v2.2 (28Jan2012)</b><br>			
+					<ul>
+						<li>Added a changelog</li>
+						<li>Removed EDI field, please put that info in the Troubleshooting section.</li>
+						<li>Separated DSN/Comm field into two individual fields</li>
+						<li>The troubleshooting field was vertically challenged. This has been fixed.
+						<ul>
+							<li><b>Side Note:</b> The troubleshooting field is specifically designed for troubleshooting notes. <br>
+							Next level troubleshooting...smart!</li>
+						</ul>
+						</li>
+						<li>Building and Room are now present on all templates</li>
+						<li>Moved base location below issue to closely follow the call script</li>
+						<li>Moved optional caller information below base location</li>
+						<li>Removed common issues drop down in favor of the official COP common calls documentation. Use that, it's official.</li>
+						<li>Several fields have been on a fast-food diet. Enhanced fields with wider spacing.</li>
+						<li>Added voice recognition. DilloNotes now responds to voice commands.</li>
 					</ul>
-					</li>
-					<li>Building and Room are now present on all templates</li>
-					<li>Moved base location below issue to closely follow the call script</li>
-					<li>Moved optional caller information below base location</li>
-					<li>Removed common issues drop down in favor of the official COP common calls documentation. Use that, it's official.</li>
-					<li>Several fields have been on a fast-food diet. Enhanced fields with wider spacing.</li>
-					<li>Added voice recognition. DilloNotes now responds to voice commands.</li>
-				</ul>
 			</div>
 			<h3>
 			<a href="#">v1.x Stable (Sometime in 2011)</a>

@@ -11,16 +11,16 @@ function tzone(tz, os, ds, cl){
 function UpdateClocks(){	
 
 	var ct = new Array(
-		new tzone('PDT: ',   -8,   1, 'violet'),
-		new tzone('MDT: ',   -7,   1, 'cyan'),
-		new tzone('CDT: ',   -6,   1, 'yellow'),
-		new tzone('EDT: ',   -5,   1, '#FFAA00'),
-		new tzone('HDT: ',   -10,  0, 'lime'),
-		new tzone('USAFE: ',  1,   1, 'pink'),
-		new tzone('GUAM:  ',  10,   0, 'red'),
-		new tzone('ZULU: ',   0,   0, '#FFFFFF'),
-		new tzone('JAPAN: ',  9,   0, 'orange'),
-		new tzone('AFGAN: ',  4.5, 1, '#C0C0C0')		
+		new tzone('PDT: <br>GMT-8<br>',   -8,   1, 'violet'),
+		new tzone('MDT: <br>GMT-7<br>',   -7,   1, 'cyan'),
+		new tzone('Det 0/2: <br>GMT-6<br>',   -6,   1, 'yellow'),
+		new tzone('EDT: <br>GMT-5<br>',   -5,   1, '#FFAA00'),
+		new tzone('Det 3: <br>GMT-10<br>',   -10,  0, 'lime'),
+		new tzone('Det 1: <br>GMT+1<br>',  1,   1, 'pink'),
+		new tzone('GUAM:  <br>GMT+10<br>',  10,   0, 'red'),
+		new tzone('ZULU: <br>GMT<br>',   0,   0, '#FFFFFF'),
+		new tzone('JAPAN: <br>GMT+9<br>',  9,   0, 'orange'),
+		new tzone('AFGAN: <br>GMT+4.5<br>',  4.5, 1, '#C0C0C0')		
 	) ;
 
 	var dt = new Date() ;	// [GMT] time according to machine clock

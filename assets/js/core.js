@@ -1,5 +1,5 @@
 //Global Vars
-var gVersion = "Version 2.6b" ;
+var gVersion = "Version 2.7" ;
 var hcontrast = false ;
 var wscreen = false ;
 var aTags_distinct = new Array() ;

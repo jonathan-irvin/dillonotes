@@ -194,7 +194,7 @@ PLT_DisplayElementID = "display_here";
 							<br>
 							<span style="font-weight:700;color:green">THIS IS A MIGRATING BASE<br>CHECK TURNOVER FOR ROUTING PROCEDURES</span>							
 						</div>
-						<br>						
+						<br><br>						
 						<label class="notes" for="identification">What may I assist you with?:</label>
 						<input type="text" name="identification" id="probdesc" class="notes-tooltip-we-reqs std-input-notes" tooltip="Why are they calling? What issues are they having?" size='48' onkeyup="javascript:$(this).dynReset();"><br><br>
 						<label class="notes" for="contactcheckbox">Caller Info (optional):</label>
@@ -223,11 +223,12 @@ PLT_DisplayElementID = "display_here";
 						</div>
 					</div><br>
 					<div id="iao">
-						<label class="notes" for="isiao">POC is IAO?:</label>
+						<label class="notes" for="isiao">Is POC member of UDG_BASENAME_IAO?:</label>
 						<input type="radio" name="isiao1" id="iao1" value="IAO"			class="notes-tooltip-ns std-input-notes radio" tooltip="POC is an Information Assurance Officer"><label for="iao1">YES</label>
 						<input type="radio" name="isiao1" id="iao2" value="NOT IAO" checked		class="notes-tooltip-ns std-input-notes radio" tooltip="POC is not an Information Assurance Officer"><label for="iao2">NO</label>
 					</div><br>
 					<h3>Assess the Priority</h3>
+					<em>Note: If Priority changes, make sure to update it here!</em>
 					<label class="notes" for="prioritymatrix">Priority Matrix:</label>
 					<select name="prioritymatrix" class="notes-tooltip-we std-input-notes" style="font-size:14px;border 0px" tooltip="Reference your SOP for more info!" onclick="javascript:$(this).toggleHigh();" onblur="javascript:$(this).toggleHigh();">
 						<option value="LOW" selected="selected">Low</option>
@@ -366,9 +367,12 @@ PLT_DisplayElementID = "display_here";
 						</div>
 					</div>
 					<div id="basic3" class="cdrivers" align="center">
+					<!-- Temp Removing for Now -->
+					<!--
 						<br><br>
 						<a href="https://afkm.wpafb.af.mil/ASPs/docman/Process/ProcessDOCFunctions.asp?DocID=3520792&Function=ViewDocument&FolderID=AE-SC-00-10-11-19-31&Filter=AE-SC-00-10" style="color:red;" target="_blank"><strong>Info Not Listed? Click Here</strong></a>						
 						<br>
+					-->
 					</div>
 					<br>
 					<h3>Troubleshoot or Take Action</h3>					
@@ -385,6 +389,7 @@ PLT_DisplayElementID = "display_here";
 					<div id="basic4"></div>
 					<fieldset>
 					<legend><span class="std-input-notes" style="font-size:14px"><strong>[Generated Notes]</strong></span></legend>
+					<em>Transfer your notes from here into Remedy...</em>
 					<div align="center"><textarea cols="48" rows="3" id="gennotes" name="generatednotes" class="expand75-800 std-input-notes" onclick="javascript:$(this).genNotes();select();select_all(this);" style="margin:0 auto;padding:15px;align:center"></textarea></div>
 					</fieldset>
 					<br/><br/>

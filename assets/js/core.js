@@ -1,5 +1,5 @@
 //Global Vars
-var gVersion = "Version 2.6b" ;
+var gVersion = "Version 2.7" ;
 var hcontrast = false ;
 var wscreen = false ;
 var aTags_distinct = new Array() ;
@@ -65,12 +65,6 @@ baselist = ["Ahmed Al Jaber AB KW", "Al Dhafra AB UAE", "Al Musnana AB OM", "Al 
 			document.getElementById('afds1').value = afds1;
 			document.getElementById('ra1').value = ra1;
 			document.getElementById('cbq').value = cbq;
-		}
-	}	
-	$.fn.poptastic = function (url) {
-		newwindow = window.open(url, 'name', 'height=600,width=800,resizable=no,scrollbars=yes,toolbar=no,status=no');
-		if (window.focus) {
-			newwindow.focus()
 		}
 	}
 	$.fn.splitText = function (st, n) {
@@ -188,58 +182,6 @@ baselist = ["Ahmed Al Jaber AB KW", "Al Dhafra AB UAE", "Al Musnana AB OM", "Al 
 		$('#migration').addClass("hide", 1);
 		$('#prevtktdiv').addClass("hide", 1);
 		$('#hightxtpoc').addClass("hide", 1);
-	}
-	$.fn.toggleCommon = function () {
-		var myselect = document.intro.calldrivers.options;
-		var selected;
-		
-		var migration = false;
-		var dmdc = false;
-		var printer = false;
-		var wkstation = false;
-		
-		for (var i = 0; i < myselect.length; i++) {
-			if (myselect[i].selected === true) {
-				selected = document.intro.calldrivers.options[i].value;
-				
-				if (i == 1) {
-					migration = true;
-				} else if (i == 2) {
-					printer = true;
-				} else if (i == 3) {
-					wkstation = true;
-				}
-				
-				if (i > 0) {
-					/* Hide everything first */
-					$('#migration').switchClass("show", "hide", 1);
-					$('#dmdc_info').switchClass("show", "hide", 1);
-					
-					//$('#location_info').switchClass("show", "hide", 1);
-					//$('#device_info_basic').switchClass("show", "hide", 1);
-					$('#device_info_adv').switchClass("show", "hide", 1);
-					$('#network_info_basic').switchClass("show", "hide", 1);
-					$('#network_info_adv').switchClass("show", "hide", 1);
-					$('#email_info_basic').switchClass("show", "hide", 1);
-					//$('#ws_info').switchClass("show", "hide", 1);
-				}
-				
-				if (i == 0) {
-					/* Hide everything first */
-					$('#migration').switchClass("show", "hide", 1);
-					$('#dmdc_info').switchClass("show", "hide", 1);
-					
-					//$('#location_info').switchClass("show", "hide", 1);
-					//$('#device_info_basic').switchClass("show", "hide", 1);
-					$('#device_info_adv').switchClass("show", "hide", 1);
-					$('#network_info_basic').switchClass("show", "hide", 1);
-					$('#network_info_adv').switchClass("show", "hide", 1);
-					$('#email_info_basic').switchClass("show", "hide", 1);
-					//$('#ws_info').switchClass("show", "hide", 1);
-				}
-				break;
-			}
-		}
 	}
 	$.fn.dynBase = function () {
 		var pbase = document.intro.baseloc.value;
@@ -401,24 +343,20 @@ baselist = ["Ahmed Al Jaber AB KW", "Al Dhafra AB UAE", "Al Musnana AB OM", "Al 
 			}
 			if (document.intro.baseloc.value != "") {
 				document.intro.generatednotes.value += "Affected BASE: " + document.intro.baseloc.value + "\n";
-			}
-			
-		}		
-
+			}			
+		}
 		if (document.intro.probdesc.value != "") {
 			document.intro.generatednotes.value += "Issue: " + document.intro.probdesc.value + "\n";
-
+		}
 		if (sharedrive_info) {
 			document.intro.generatednotes.value += "Share Drive Path: " + document.intro.share_path.value + "\n";
-		}
-		
+		}		
 		if (printer_info) {
 			document.intro.generatednotes.value += "Printer IP: " + document.intro.printer_network_ip.value + "\n";
 		}
 		if (port_security_info) {
 			document.intro.generatednotes.value += "MAC Address: " + document.intro.network_mac.value + "\n";
-		}
-		
+		}		
 		if (dse.length > 0) {
 			document.intro.generatednotes.value += "Digitally-Signed Email Received? " + "YES" + "\n\n";
 			document.intro.generatednotes.value += "Received Digitally-Signed Email stating the following:" + "\n\n";
@@ -526,22 +464,6 @@ baselist = ["Ahmed Al Jaber AB KW", "Al Dhafra AB UAE", "Al Musnana AB OM", "Al 
 		document.intro.dsecontents.value = "";
 		var pocinfo = setTimeout("$('#poccontactinfo').switchClass('show', 'hide', 1);", 1000);
 	}
-	$.fn.sot = function () {
-		if (!stayontop) {
-			stayontop = true;
-		} else {
-			stayontop = false;
-		}
-		if (stayontop == true) {
-			$(this).info('I will stay in front of windows behind me');
-			window.onblur = function () {
-				self.focus();
-			}
-		} else {
-			$(this).info('I will not stay in front of windows behind me');
-			window.onblur = function () {}
-		}
-	}
 	$.fn.high_contrast = function (enabled) {
 		document.getElementById('high-contrast-box').disabled = true;
 		document.getElementById('wide-screen-box').disabled = true;
@@ -601,20 +523,6 @@ baselist = ["Ahmed Al Jaber AB KW", "Al Dhafra AB UAE", "Al Musnana AB OM", "Al 
 			var msg = setTimeout("$(this).success('Wide Screen DISABLED')", 1600);
 		}
 	}
-	$.fn.inlineinfo = function (text) {		
-		document.getElementById('info').innerHTML = '<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span><strong>Info: </strong>' + text + '</p>';
-		$('#info').show("blind", 1500);
-		setTimeout(function () {
-			$('#info').hide("blind", 1500);
-		}, 9000);
-	}
-	$.fn.inlineerror = function (text) {
-		document.getElementById('error').innerHTML = '<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><strong>Error! </strong>' + text + '</p>';
-		errstatus = 1;
-		if (errstatus == 0) {
-			$('#error').show("blind", 1500);
-		}
-	}
 	$.fn.info = function (notice_text) {
 		$.noticeAdd({
 			text : notice_text,
@@ -643,85 +551,7 @@ baselist = ["Ahmed Al Jaber AB KW", "Al Dhafra AB UAE", "Al Musnana AB OM", "Al 
 			type : 'info'
 		});
 	}
-	$.fn.opencop = function () {
-		var links = new Array();
-		var aTags = new Array();
-		for (i = 0; i < document.links.length; i++) {
-			//Test for empty links with #
-			var patt = /#/g;
-			var result = patt.test(document.links[i].href);
-			if (!result) {
-				links.push(document.links[i].href);
-				aTags.push(document.links[i].innerText);
-			}
-		}
-		var searchfor = document.copsearch.searchbox;
-		var searchtext = searchfor.value;
-		var success = false;
-		
-		if (searchtext == "What is the answer to life, the universe, and everything?") {
-			$(this).info(42);
-			return;
-		} else if (searchtext == "version") {
-			$(this).info(gVersion);
-			return;
-		} else if (searchtext == "chuck norris") {
-			$(this).error('The ESD CoP Index won\'t search for Chuck Norris because it knows you don\'t find Chuck Norris, he finds you.');
-			return;
-		} else if (searchtext == "enable high-contrast") {
-			document.getElementById('high-contrast-box').checked = true;
-			$(this).high_contrast(true);
-			return;
-		} else if (searchtext == "disable high-contrast") {
-			document.getElementById('high-contrast-box').checked = false;
-			$(this).high_contrast(false);
-			return;
-		} else if (searchtext == "enable wide-screen") {
-			document.getElementById('wide-screen-box').checked = true;
-			$(this).wide_screen(true);
-			return;
-		} else if (searchtext == "disable wide-screen") {
-			document.getElementById('wide-screen-box').checked = false;
-			$(this).wide_screen(false);
-			return;
-		} else if (searchtext == "stats") {
-			$(this).inlineinfo('::Current Stats::<br/>\n' + gVersion + '<br/>\n' + 'Total Links: ' + document.links.length + '<br/>\n' + 'Total Indexed: ' + aTags.length + ' (' + Math.round((aTags.length / document.links.length) * 100) + '%)' + '<br/>\n' + 'Total Distinct Links: ' + aTags_distinct.length + '<br/>\n' + 'Total Duplicate Links: ' + (aTags.length - aTags_distinct.length));
-			return;
-		} else if (searchtext == "feedback") {
-			$(this).info('Feel free to email your feedback to jonathan.irvin.ctr@us.af.mil');
-			return;
-		} else if (searchtext == "help") {
-			$(this).inlineinfo('Current Commands<br/>\n' + '<br/><br/>' + '"version" - Reveals the current version. Currently it is ' + gVersion + '<br/>\n' + '"(enable/disable) high-contrast" - Changes the page to a more viewable format in low-light conditions' + '<br/>\n' + '"(enable/disable) wide-screen" - Expands the content area to fill the width of your screen' + '<br/>\n');
-			return;
-		} else if (searchtext != "") {
-			for (i = 0; i < aTags.length; i++) {
-				if (aTags[i] == searchtext) {					
-					var patt = /(#section-)[0-9]/g;
-					var result = patt.test(links[i]);
-					success = true;					
-					if (result) {
-						window.open(links[i], "_parent"); //Open in the same window if it's local
-					} else {
-						window.open(links[i], "_blank"); //Otherwise, open in a new window
-						$(this).success("Launching the Document: <a href=\"" + links[i] + "\">Link</a>");
-					}
-					return;
-				} else {
-					if ((i == aTags.length - 1) && (!success)) {
-						if (document.getElementById('cop-search-box').checked == false) {
-							/* $('#search-cop-dialog').dialog('open').css('display', 'inline'); */
-							$(this).error("No results found here!  Searching the CoP!");
-							window.open("https://esd.us.af.mil/sop/_layouts/OSSSearchResults.aspx?k=" + searchtext + "&cs=This%20Site&u=https%3A%2F%2Fesd.us.af.mil%2Fsop", height = 600, width = 800, resizable = 1, scrollbars = 1, toolbar = 1, status = 1);
-						} else {
-							window.open("https://esd.us.af.mil/sop/_layouts/OSSSearchResults.aspx?k=" + searchtext + "&cs=This%20Site&u=https%3A%2F%2Fesd.us.af.mil%2Fsop", height = 600, width = 800, resizable = 1, scrollbars = 1, toolbar = 1, status = 1);
-						}
-						return;
-					}
-				}
-			}
-		}
-	}
-})( jQuery );
+})(jQuery);
 jQuery('#probdesc').bind('change keyup', function () {
 	var str = String(jQuery(this).val().toLowerCase());
 	if (str.indexOf('"do a barrel') == 0) {

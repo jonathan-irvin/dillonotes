@@ -184,7 +184,7 @@ PLT_DisplayElementID = "display_here";
 							<input type="text" name="prevtkt" id="ptkt" class="notes-tooltip-we-reqs std-input-notes" tooltip="Since this is an existing issue, put any past ticket numbers here for reference. Only for the same issue, though. Remember, just because it's recurring to them doesn't mean it is to us. If they haven't called in for it yet it is considered a new ticket." size='15'>
 						</div>
 						<br>
-						<label class="notes" for="baseloc">What base?:</label>
+						<label class="notes" for="baseloc">What base are you calling from?:</label>
 						<input type="text" name="baseloc" id="blist" onkeyup="javascript:$(this).dynBase();" class="notes-tooltip-we-reqs std-input-notes">
 						<div id="usafe_check" class="hide" align="center">
 							<br>
@@ -195,28 +195,28 @@ PLT_DisplayElementID = "display_here";
 							<span style="font-weight:700;color:green">THIS IS A MIGRATING BASE<br>CHECK TURNOVER FOR ROUTING PROCEDURES</span>							
 						</div>
 						<br>						
-						<label class="notes" for="identification">Why are they calling?:</label>
+						<label class="notes" for="identification">What may I assist you with?:</label>
 						<input type="text" name="identification" id="probdesc" class="notes-tooltip-we-reqs std-input-notes" tooltip="Why are they calling? What issues are they having?" size='48' onkeyup="javascript:$(this).dynReset();"><br><br>
-						<label class="notes" for="contactcheckbox">Caller Info (optional)?:</label>
+						<label class="notes" for="contactcheckbox">Caller Info (optional):</label>
 						<input type="checkbox" name="contactcheckbox" class="notes-tooltip-ns std-input-notes radio" tooltip="Click this box to add contact info within your notes. Note: This isn't needed, as Remedy has those fields for you." onclick="javascript:$(this).togglecontactinfo();"><br>
 						<div id="poccontactinfo" class="hide">
 						<fieldset>
 							<legend>[Contact Info]</legend>
-							<label class="notes" for="poccaller">POC/Caller:</label>
+							<label class="notes" for="poccaller">Who am I speaking with?:</label>
 							<input type="text" name="poccaller" id="poc" class="notes-tooltip-we-reqs std-input-notes" tooltip="Who is calling in? Who is the Point of Contact?" onkeyup="javascript:$(this).togglePOCisUser();">
 							<br>
-							<label class="notes" for="isuser">Is POC/User the same?</label>
+							<label class="notes" for="isuser">Are you the affected user?</label>
 							<input type="checkbox" name="isuser" value="true" checked class="notes-tooltip-ns std-input-notes radio" tooltip="Is the POC and User the same person?" onclick="javascript:$(this).togglePOCisUser();">
 							<br>
 							<div id="pocisuser" class="hide">
-								<label class="notes" for="isaffecteduser">Who is the affected user?:</label>
+								<label class="notes" for="isaffecteduser">Who is the issue affecting?:</label>
 								<input type="text" name="isaffecteduser" id="isafftuser" class="notes-tooltip-we-reqs std-input-notes" tooltip="Who are they calling about? Are they calling about themselves or someone else?">
 							</div>
 							<br>							
 							<label class="notes" for="dsnnum">DSN #:</label>
 							<input type="text" name="dsnnum" id="dsn" class="notes-tooltip-we-reqs std-input-notes" tooltip="What's a good DSN number to reach them at?">
 							<br>
-							<label class="notes" for="commnum">Comm #:</label>
+							<label class="notes" for="commnum">Commercial #:</label>
 							<input type="text" name="commnum" id="comm" class="notes-tooltip-we-reqs std-input-notes" tooltip="What's a good Commercial number to reach them at?">
 							<br>
 						</fieldset>
